@@ -376,7 +376,7 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
 .pager a::before {content:""; display:block; position:absolute; left:50%; top:50%; width:54px; height:56px; margin:-29px 0 0 -27px; background:url(../images/pager-hover.svg) no-repeat; opacity:0; z-index:-1; transition:all 0.2s; pointer-events:none}
 .pager a:hover::before {opacity:1}
 .pager a.active::before {display:none}
-.pager a.active {font-weight:bold}
+.pager a.active {font-weight:bold; color:#fff}
 .pager a::after {content:""; display:block; position:absolute; left:50%; top:50%; width:54px; height:56px; margin:-29px 0 0 -27px; background:url(../images/pager-active.svg) no-repeat; opacity:0; z-index:-1; transition:all 0.2s; pointer-events:none}
 .pager a.active::after {opacity:1}
 
