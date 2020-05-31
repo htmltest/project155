@@ -407,7 +407,6 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
 
 header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; background:#fff; border-bottom:1px solid #eaeaea; transition:height 0.5s, box-shadow 0.5s, transform 0.5s}
 .header-fixed header {box-shadow:0px 4px 10px rgba(187, 187, 187, 0.25); height:66px}
-.header-fixed header.header-up {transform:translateY(-100%)}
 .window-open header {transform:translateY(-100%)}
 
 @media screen and (max-width:1169px) {
@@ -814,7 +813,7 @@ footer .container {position:relative}
 .window-open,
 .window-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
 
-.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:999; background:rgba(0, 0, 0, 0.3); text-align:center}
+.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:99999; background:rgba(0, 0, 0, 0.3); text-align:center}
 .window::before {content:""; display:inline-block; height:100%; vertical-align:middle}
 .window-loading {position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/loading.gif) no-repeat center}
 .window-container {display:inline-block; vertical-align:middle; position:relative; text-align:left; background:#fff; margin:30px 0; transition:transform 0.2s, opacity 0.2s}

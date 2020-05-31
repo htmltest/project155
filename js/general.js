@@ -416,7 +416,7 @@ function initForm(curForm) {
     curForm.find('.form-select select').each(function() {
         var curSelect = $(this);
         var options = {
-            minimumResultsForSearch: 99
+            minimumResultsForSearch: 20
         }
 
         curSelect.select2(options);
@@ -452,19 +452,6 @@ $(window).on('load resize scroll', function() {
 
     if (windowScroll > 0) {
         $('html').addClass('header-fixed');
-        var lastScroll = $('header').data('lastScroll');
-        if (typeof (lastScroll) == 'undefined') {
-            lastScroll = 0;
-        }
-
-        if (Math.abs(lastScroll - windowScroll) > 5) {
-            if (windowScroll > lastScroll){
-                $('header').addClass('header-up');
-            } else {
-                $('header').removeClass('header-up');
-            }
-            $('header').data('lastScroll', windowScroll);
-        }
     } else {
         $('html').removeClass('header-fixed');
     }

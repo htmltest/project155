@@ -738,6 +738,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .video-detail {margin:74px 0; position:relative; height:658px}
+.video-detail-card {margin:20px 0 0 0; width:930px; height:524px}
 .video-detail-link {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center; background-size:cover}
 .video-detail.start .video-detail-link {display:none}
 .video-detail-link span {display:block; position:absolute; left:50%; top:50%; width:131px; height:131px; margin:-65px 0 0 -65px}
@@ -828,23 +829,25 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .window-auth .auth-social {text-align:center}
 }
 
-.window-auth-ctrl {margin:40px -30px 0 -40px; background:#fef7d9; text-align:center; padding:25px 0; direction:rtl}
+.window-auth-ctrl {margin:40px -30px 0 -40px; background:#d9eef7; text-align:center; padding:25px 0; direction:rtl}
 .window-auth-ctrl .form-submit {display:inline-block; vertical-align:middle; margin:0; direction:ltr; z-index:1}
 .window-auth-ctrl .auth-forgot {display:inline-block; vertical-align:middle; margin:0; padding:0; border:none; direction:ltr; margin:0 25px 0 0}
-.window-auth-ctrl .btn-mini::before {border-color:#008cc9; opacity:0.35; z-index:0}
+.window-auth-ctrl .btn-mini::before {display:none}
 
 @media screen and (max-width:1169px) {
     .window-auth-ctrl {margin:46px -19px 0 -19px; padding:30px 0 40px 0; direction:ltr}
     .window-auth-ctrl .form-submit {display:block; width:308px; margin:0 auto}
     .window-auth-ctrl .form-submit .btn {padding:0; width:100%}
     .window-auth-ctrl .auth-forgot {display:block; margin:28px 0 0 0; font-weight:normal}
+    .window-auth-ctrl .btn-mini::after {display:none}
 }
 
-.window-auth .registration-side-title {text-align:center; margin:21px auto 0 auto}
-.window-auth .registration-side-contacts {margin:24px auto 0 auto; text-align:left}
+.window-auth .registration-side-title {margin:3px 0 0 0; text-align:left; max-width:none}
+.window-auth .registration-side-contacts {margin:24px 0 70px 0; text-align:left}
 .window-auth .contacts-item-inner {z-index:1}
 .window-auth .contacts-item-inner::before {z-index:0}
-.window-auth h3 {text-align:left; font-weight:500}
+.window-auth h3 {text-align:left; font-weight:normal}
+.window-auth form > h3:first-child {margin-top:11px}
 .window-auth .registration-zones {margin-bottom:37px}
 
 @media screen and (max-width:1169px) {
@@ -1082,6 +1085,10 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .catalogue-item-country-item {display:inline-block; vertical-align:middle; margin:0 0 0 18px}
 .catalogue-item-country-item:first-child {margin:0}
 .catalogue-item-country-item img {display:inline-block; vertical-align:middle; height:23px; margin:-2px 0 0 0}
+.catalogue-item-country-item-hint {position:relative}
+.catalogue-item-country-item-hint-title {display:none; position:absolute; z-index:2; left:100%; margin-left:11px; top:50%; white-space:nowrap; height:42px; margin-top:-21px; padding:0 10px; font-size:14px; line-height:40px; color:#353535; font-size:16px; font-weight:normal; letter-spacing:0; background:#fff; border:1px solid #e2e2e2; box-shadow:3px 9px 20px rgba(0, 0, 0, 0.11)}
+.catalogue-item-country-item-hint:hover .catalogue-item-country-item-hint-title {display:block}
+.catalogue-item-country-item-hint-title::before {content:""; display:block; width:14px; height:14px; border-top:1px solid #e2e2e2; border-right:1px solid #e2e2e2; background:#fff; transform:rotate(-135deg); position:absolute; left:-8px; top:50%; margin-top:-7px}
 .catalogue-item-country-item-title {display:none}
 .catalogue-item-country-sep {display:inline-block; vertical-align:middle; width:1px; height:10px; background:#c4c4c4; margin:-2px 0 0 7px}
 .catalogue-item-country-region {display:inline-block; vertical-align:middle; position:relative; font-size:14px; line-height:23px; letter-spacing:0; margin:0 0 0 7px}
@@ -1097,6 +1104,8 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .catalogue-item-source-value {margin:2px 0 0 0; font-size:18px; line-height:27px; font-weight:300; letter-spacing:0; color:#000}
 .catalogue-item-source-value img {vertical-align:middle; margin:-4px 0 0 8px}
 .catalogue-item-source-value img:first-child {margin-left:0}
+.catalogue-item-source-value > span {vertical-align:middle; margin:-4px 0 0 8px}
+.catalogue-item-source-value > span:first-child {margin-left:0}
 .catalogue-item-props {position:absolute; right:12px; bottom:12px}
 .catalogue-item-prop {position:relative; float:left; margin:0 0 0 12px; z-index:1}
 .catalogue-item-prop-icon {width:29px; height:29px; border-radius:50%; background:#cce8f4; color:#4c4a41; font-weight:500; font-size:14px; line-height:29px; letter-spacing:0.05em; text-align:center; transition:background-color 0.2s}
@@ -1163,6 +1172,8 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .catalogue-list-rows .catalogue-item-category {display:table-cell; vertical-align:middle; font-size:0; line-height:0; letter-spacing:-1px; width:190px}
     .catalogue-list-rows .catalogue-item-category img {display:inline-block; vertical-align:middle; margin:0 0 0 12px}
     .catalogue-list-rows .catalogue-item-category img:first-child {margin:0}
+    .catalogue-list-rows .catalogue-item-category > span {display:inline-block; vertical-align:middle; margin:0 0 0 12px}
+    .catalogue-list-rows .catalogue-item-category > span:first-child {margin:0}
     .catalogue-list-rows .catalogue-item-source {display:table-cell; vertical-align:middle; font-size:14px; line-height:21px; letter-spacing:0; width:100px}
     .catalogue-list-rows .catalogue-item-source-title {display:none}
     .catalogue-list-rows .catalogue-item-source-value {margin:0; font-size:14px; line-height:21px}
@@ -1732,4 +1743,30 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 
 @media screen and (max-width:1169px) {
     .faq-menu {display:none}
+}
+
+.remind-data {margin:13px 0 0 0; border-bottom:1px solid #e3e3e3; padding:0 0 29px 0}
+.remind-data::after {content:""; display:block; clear:both}
+.remind-data-date {float:left; font-size:24px; line-height:36px; color:#171717}
+.remind-data-day {float:left; margin:4px 0 0 7px; font-size:20px; line-height:30px; color:#868686}
+.remind-data-time {float:left; margin:0 0 0 35px; font-size:24px; line-height:36px; color:#171717; position:relative}
+.remind-data-time::before {content:""; display:block; position:absolute; left:-16px; top:50%; width:1px; height:19px; background:#c4c4c4; margin-top:-10px}
+
+.remind-data+h3 {margin-top:26px}
+.remind-company {margin:0 0 26px 0; border-bottom:1px solid #e3e3e3; text-align:left; padding:0 0 25px 0}
+.remind-company-inner {display:table; width:100%}
+.remind-company-logo {display:table-cell; vertical-align:middle; width:178px; line-height:0}
+.remind-company-logo img {max-width:159px}
+.remind-company-text {display:table-cell; vertical-align:middle; border-left:1px solid #e8e8e8; padding:0 0 0 18px}
+.remind-company-name {font-size:18px; line-height:27px; font-weight:normal; color:#171717}
+.remind-company-descr {font-size:14px; line-height:21px; font-weight:600; color:#b7b7b7}
+
+@media screen and (max-width:1169px) {
+    .remind-company {margin:13px 0 26px 0; border-bottom:1px solid #e3e3e3; text-align:left; padding:0 0 25px 0}
+    .remind-company-inner {display:block}
+    .remind-company-logo {display:block; width:auto}
+    .remind-company-logo img {max-width:100%}
+    .remind-company-text {display:block; border-left:none; padding:2px 0 0 0}
+    .remind-company-name {font-size:20px; line-height:30px; font-weight:500}
+    .remind-company-descr {font-size:18px; line-height:27px; margin:3px 0 0 0}
 }

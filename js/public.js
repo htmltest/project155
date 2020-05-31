@@ -3,9 +3,17 @@ $(document).ready(function() {
     $('.main-welcome-link a, .main-conf-reg a, .faq-menu a').click(function(e) {
         var curBlock = $($(this).attr('href'));
         if (curBlock.length == 1) {
-            $('html, body').animate({'scrollTop': curBlock.offset().top - 50});
+            $('html, body').animate({'scrollTop': curBlock.offset().top - 100});
         }
         e.preventDefault();
+    });
+
+    $('.page-link').click(function(e) {
+        var curBlock = $($(this).attr('href'));
+        if (curBlock.length == 1) {
+            $('html, body').animate({'scrollTop': curBlock.offset().top - 100});
+            e.preventDefault();
+        }
     });
 
     $('.main-news-list').slick({
