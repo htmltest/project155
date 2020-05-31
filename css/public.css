@@ -13,7 +13,7 @@
     .mobile-menu-visit .btn img {display:inline-block; vertical-align:middle; margin:-6px 13px 0 0}
 }
 
-.main-slider {position:absolute; right:-111px; top:19px; width:738px; height:802px; overflow:hidden; z-index:-1}
+.main-slider {position:absolute; right:-111px; top:-98px; width:738px; height:802px; overflow:hidden; z-index:-1}
 .main-slider-item {position:absolute; left:0; top:0; width:100%; height:100%}
 .main-slider-item svg {width:738px; height:802px; position:absolute; right:0; top:0}
 .main-slider-item.active {z-index:2}
@@ -78,7 +78,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-news-container::after {content:""; display:block; clear:both}
 .main-news-list {float:left; width:75%; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
 .main-news-list.slick-initialized {overflow:visible}
-.main-news-item {display:inline-block; vertical-align:top; width:25%; padding:10px; white-space:normal}
+.main-news-item {display:inline-block; vertical-align:top; width:33.33%; padding:10px; white-space:normal}
 .main-news-item-inner {display:block; position:relative; height:190px; text-decoration:none; border:1px solid #e2e2e2; padding:34px 19px 0 19px; background:#fff}
 .main-news-item-inner::after {content:""; display:block; position:absolute; right:-1px; bottom:-1px; left:-1px; top:-1px; border:4px solid #2e9ecf; pointer-events:none; transition:all 0.2s; opacity:0}
 .main-news-item-inner:hover::after {opacity:1}
@@ -533,12 +533,17 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .contacts-header::after {content:""; display:block; clear:both}
 .contacts-header h1 {float:left; margin:0}
 .contacts-header-text {float:right; margin:7px 0 0 0; width:655px}
+.contacts-text {margin:29px 0 0 0; max-width:823px}
 
 @media screen and (max-width:1169px) {
     .contacts-header {margin:30px 0 0 0; padding:0; border-bottom:none}
     .contacts-header h1 {float:none}
     .contacts-header-text {float:none; margin:5px 0 0 0; width:auto}
 }
+
+.contacts-social {border-bottom:1px solid #dfdfdf; padding:0 0 40px 0; margin:34px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
+.contacts-social a {display:inline-block; vertical-align:top; margin:0 0 0 20px}
+.contacts-social a:first-child {margin:0}
 
 .contacts-block {margin:44px 0 0 0}
 .contacts-block h3 {font-weight:500; margin-bottom:0}
@@ -1316,30 +1321,32 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .container-side-content {float:none; width:auto}
 }
 
-.news {margin:0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
-.news-item {display:inline-block; vertical-align:top; width:50%; padding:0 10px 20px 10px}
-.news-item-inner {display:block; position:relative; text-decoration:none; border:1px solid #e2e2e2; padding:34px 30px; background:#fff}
-.news-item-inner::before {content:""; display:block; position:absolute; right:-11px; bottom:-11px; width:100%; height:100%; border-right:10px solid #fef7d9; border-bottom:10px solid #fef7d9; pointer-events:none; transition:all 0.2s; z-index:-1}
-.news-item-inner:hover::before {right:0; bottom:0}
-.news-item-inner::after {content:""; display:block; position:absolute; right:-1px; bottom:-1px; left:-1px; top:-1px; border:4px solid #2e9ecf; pointer-events:none; transition:all 0.2s; opacity:0}
-.news-item-inner:hover::after {opacity:1}
+.news-item {border-top:1px solid #eaeaea; padding:9px 0}
+.news-item:first-child {border-top:none; padding-top:0}
+.news-item-inner {display:table; width:100%; text-decoration:none}
+.news-item-preview {display:table-cell; vertical-align:top; width:360px; line-height:0}
+.news-item-preview img {display:block; width:360px}
+.news-item-container {display:table-cell; vertical-align:middle; padding:0 0 0 60px}
 .news-item-date {font-size:13px; line-height:19px; letter-spacing:0; font-weight:normal; color:#727272; opacity:0.8}
 .news-item-title {margin:6px 0 0 0; font-size:20px; line-height:26px; letter-spacing:0; font-weight:normal; color:#000}
 .news-item-anonce {margin:15px 0 0 0; font-size:16px; line-height:24px; letter-spacing:0; font-weight:300; color:#000}
 
 @media screen and (max-width:1169px) {
-    .news {margin:0}
-    .news-item {display:block; width:auto; padding:0; margin:20px 0 0 0}
-    .news-item-inner {padding:30px 30px 43px 30px}
-    .news-item-date {font-size:20px; line-height:30px; opacity:1; color:#787878}
-    .news-item-title {margin:13px 0 0 0; font-size:24px; line-height:36px}
+    .news-item {border-top:none; padding:0; margin:40px 0 0 0}
+    .news-item:first-child {margin:0}
+    .news-item-inner {display:block; width:auto}
+    .news-item-preview {display:block; width:auto}
+    .news-item-preview img {width:100%}
+    .news-item-container {display:block; padding:0; margin:20px 0 0 0}
+    .news-item-date {font-size:16px; line-height:24px; opacity:1; color:#787878}
+    .news-item-title {margin:4px 0 0 0; font-size:24px; line-height:36px}
     .fonts-loaded .news-item-title {font-family:FiraSans, sans-serif}
-    .news-item-anonce {margin:10px 0 0 0; font-size:20px; line-height:30px}
+    .news-item-anonce {display:none}
 }
 
 .container-side-content h1 {margin-top:0}
 
-.news-detail-header {border-bottom:1px solid #f0f0f0; margin:18px 0 38px 0; padding:0 0 34px 0; font-weight:normal; color:#8b8b8b}
+.news-detail-header {border-bottom:2px solid #f0f0f0; margin:18px 0 38px 0; padding:0 0 34px 0; font-weight:normal; color:#8b8b8b}
 .news-detail-header::after {content:""; display:block; clear:both}
 
 @media screen and (max-width:1169px) {
@@ -1358,11 +1365,11 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .news-back-top+.container-side {margin:45px 0 0 0}
 }
 
-.news-share {margin:44px 0 0 0; border-top:1px solid #f0f0f0; padding:40px 0 0 0}
+.news-share {margin:44px 0 0 0; border-top:2px solid #f0f0f0; padding:40px 0 0 0}
 .news-share::after {content:""; display:block; clear:both}
 .news-share-item {float:left; width:170px; margin:0 0 0 10px}
 .news-share-item:first-child {margin:0}
-.news-share-item a {display:block; padding:0 0 0 19px; height:38px; line-height:40px; font-size:12px; font-weight:500; text-decoration:none; text-transform:uppercase; background:#008cc9; color:#414141; letter-spacing:0.05em}
+.news-share-item a {display:block; padding:0 0 0 19px; height:38px; line-height:40px; font-size:12px; font-weight:500; text-decoration:none; text-transform:uppercase; background:#2984df; color:#fff; letter-spacing:0.05em}
 .news-share-item a:hover {background:#2e9ecf}
 .news-share-item a img {display:inline-block; vertical-align:middle; margin:-2px 12px 0 0}
 
@@ -1381,7 +1388,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .news-back-bottom {margin:100px -999px 0 -999px}
-.news-back-bottom a {display:block; vertical-align:top; height:81px; text-align:center; line-height:85px; font-size:14px; letter-spacing:0.05em; font-weight:normal; text-transform:uppercase; color:#000; text-decoration:none; background:#fef7d9}
+.news-back-bottom a {display:block; vertical-align:top; height:81px; text-align:center; line-height:85px; font-size:14px; letter-spacing:0.05em; font-weight:normal; text-transform:uppercase; color:#000; text-decoration:none; background:rgba(204, 232, 244, 0.58)}
 .news-back-bottom a:hover {background:#2e9ecf}
 .news-back-bottom a::before {content:""; display:inline-block; vertical-align:middle; width:26px; height:10px; background:url(../images/news-back-bottom.svg) no-repeat; transition:all 0.2s; margin:-4px 20px 0 0}
 .news-back-bottom a:hover::before {width:36px; margin-left:-10px}
@@ -1425,6 +1432,12 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .faq-item-answer {display:none; max-width:740px; padding:0 0 30px 0}
 .faq-btn {text-align:center; margin:40px 0 0 0}
 
+@media screen and (max-width:1169px) {
+    .faq-item-title a {padding:20px 32px 20px 0; font-size:24px; line-height:36px; font-weight:normal}
+    .faq-item-title a::after {width:25px; height:25px; top:26px; background-size:100%}
+    .faq-item-answer {max-width:none}
+}
+
 .main-schedule {margin:100px 0 0 0}
 .main-schedule-list {margin:30px 0 0 0; position:relative; max-height:512px; overflow:hidden; width:930px; transition:all 0.2s}
 .main-schedule-list.open {max-height:3000px}
@@ -1462,7 +1475,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 
 .main-info {margin:99px 0 0 0}
 .main-info-container {position:relative}
-.main-info-container::before {content:""; display:block; position:absolute; left:770px; top:9px; bottom:0; width:1px; background:#d8d8d8}
+.main-info-container::before {content:""; display:block; position:absolute; right:399px; top:9px; bottom:0; width:1px; background:#d8d8d8}
 .main-info-container::after {content:""; display:block; clear:both}
 .main-info-text {float:left; width:623px}
 .main-info-text-main {text-transform:uppercase; font-weight:normal; font-size:30px; line-height:48px; letter-spacing:0.03em; color:#000}
@@ -1482,7 +1495,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .main-info-text-doc {margin:36px 0 0 0}
 }
 
-.main-info-side {float:right; max-width:370px}
+.main-info-side {float:right; width:327px}
 .main-info-side-header {font-weight:600; font-size:20px; line-height:30px; color:#008cc9}
 .fonts-loaded .main-info-side-header {font-family:FiraSans, sans-serif}
 .main-info-side-item {margin:72px 0 0 0}
@@ -1493,7 +1506,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-info-side-item-text {float:left; font-size:18px; line-height:27px; margin:0 0 0 27px}
 
 @media screen and (max-width:1169px) {
-    .main-info-side {float:none; max-width:auto; margin:61px 0 0 0}
+    .main-info-side {float:none; width:auto; margin:61px 0 0 0}
     .main-info-side-item-value {font-size:60px}
     .main-info-side-item-text {font-size:20px; line-height:30px}
     .main-info-side-item {margin:37px 0 0 0}
@@ -1535,7 +1548,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-days-menu-inner a.current {background:#e5f3fa}
 .main-days-menu-inner a:first-child {margin:0}
 .main-days-menu-item {display:table}
-.main-days-menu-item-inner {display:table-cell; vertical-align:middle; height:58px; transition:all 0.2s; padding:0 16px}
+.main-days-menu-item-inner {display:table-cell; vertical-align:middle; height:58px; padding:0 16px}
 .main-days-menu-inner a.active .main-days-menu-item-inner {height:74px; padding:0 24px}
 .main-days-menu-item-date {font-weight:normal; font-size:18px; line-height:27px; letter-spacing:0}
 .main-days-menu-item-date span {font-size:16px; font-weight:300; margin:0 0 0 6px}
@@ -1612,7 +1625,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .main-days-preview-section {padding:6px 0}
 }
 
-.side-link {display:block; position:fixed; z-index:80; right:0; top:50%; transform:translateY(-50%); background:#008cc9; color:#fff; text-align:center; width:216px; text-decoration:none; font-size:14px; line-height:18px; font-weight:normal; padding:9px 0; border-radius:2px 0 0 2px; box-shadow:6px 6px 40px rgba(81, 81, 81, 0.2)}
+.side-link {display:block; position:fixed; z-index:80; transition:background 0.2s; right:0; top:50%; transform:translateY(-50%); background:#008cc9; color:#fff; text-align:center; width:216px; text-decoration:none; font-size:14px; line-height:18px; font-weight:normal; padding:9px 0; border-radius:2px 0 0 2px; box-shadow:6px 6px 40px rgba(81, 81, 81, 0.2)}
 .side-link::before {content:""; display:block; margin:0 16px 11px 16px; height:1px; background:rgba(255, 255, 255, 0.54)}
 .side-link::after {content:""; display:block; margin:12px 16px 0 16px; height:1px; background:rgba(255, 255, 255, 0.54)}
 .side-link:hover {background:#2e9ecf}
@@ -1694,4 +1707,29 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .main-pf-welcome-link .btn-pf {padding:0}
     .main-pf-welcome-link .btn-pf::after {right:auto}
     .main-pf-welcome-link .btn-pf:hover::after {right:auto}
+}
+
+.faq h2 {margin:39px 0 10px 0; font-weight:600}
+.faq .faq-list {margin:10px 0 0 0}
+
+.faq-feedback {margin:80px 0 0 0}
+.faq-feedback-text {max-width:598px; margin:12px 0 0 0}
+.faq-feedback .forgot-help {margin:24px 0 0 0; border-bottom:none; padding:0}
+.faq-feedback .forgot-help-contacts {margin:0}
+.faq-feedback .forgot-help-feedback {float:left; margin:24px 0 0 40px; text-align:center}
+
+@media screen and (max-width:1169px) {
+    .faq-feedback .forgot-help-feedback {float:none; margin:24px 0 0 0; text-align:center}
+}
+
+.faq-menu {margin:34px 0; line-height:28px}
+.faq-menu::after {content:""; display:block; clear:both}
+.faq-menu a {float:left; height:28px; text-decoration:none; border-radius:2px; color:#000; padding:0 14px; margin:0 0 0 2px}
+.faq-menu a:first-child {margin:0}
+.faq-menu a:hover,
+.faq-menu a.active {background:#cce8f4}
+.faq-menu a.active {padding:0 18px}
+
+@media screen and (max-width:1169px) {
+    .faq-menu {display:none}
 }

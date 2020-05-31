@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-    $('.main-welcome-link-other').click(function(e) {
+    $('.main-welcome-link a, .main-conf-reg a, .faq-menu a').click(function(e) {
         var curBlock = $($(this).attr('href'));
         if (curBlock.length == 1) {
-            $('html, body').animate({'scrollTop': curBlock.offset().top});
+            $('html, body').animate({'scrollTop': curBlock.offset().top - 50});
         }
         e.preventDefault();
     });
@@ -415,6 +415,16 @@ $(window).on('load resize scroll', function() {
                 $('.omni').css({'margin-bottom': (windowScroll + windowHeight) - $('.footer-left').offset().top});
             } else {
                 $('.omni').css({'margin-bottom': 0});
+            }
+        }
+    }
+
+    if ($('.side-link').length == 1) {
+
+        if ($(window).width() > 1169) {
+            $('.side-link').css({'margin-top': 0});
+            if ($('.side-link').offset().top + $('.side-link').outerHeight() > $('.up-link').offset().top) {
+                $('.side-link').css({'margin-top': $('.up-link').offset().top - ($('.side-link').offset().top + $('.side-link').outerHeight())});
             }
         }
     }
