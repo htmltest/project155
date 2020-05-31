@@ -25,11 +25,11 @@ $(document).ready(function() {
 
     $('.main-reviews-list-inner').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
-        dots: false,
+        dots: true,
         responsive: [
             {
                 breakpoint: 1169,
@@ -251,6 +251,9 @@ $(document).ready(function() {
     $('body').on('click', '.main-days-menu-inner a', function(e) {
         var curLink = $(this);
         if (!curLink.hasClass('active')) {
+            $('.main-days-video-player').html('');
+            $('.main-days-video').removeClass('start');
+
             $('.main-days-menu-inner a.active').removeClass('active');
             curLink.addClass('active');
             var curIndex = $('.main-days-menu-inner a').index(curLink);
@@ -264,6 +267,19 @@ $(document).ready(function() {
         $('.main-days-video-player').html('');
         $(this).parent().addClass('start');
         $(this).parent().find('.main-days-video-player').html('<iframe width="560" height="315" src="' + $(this).attr('href') + '?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.main-days-schedule-time a', function(e) {
+        $('.main-days-video-player').html('');
+        var curBlockVideo = $(this).parents().filter('.main-days-content').find('.main-days-video');
+        curBlockVideo.addClass('start');
+        curBlockVideo.find('.main-days-video-player').html('<iframe width="560" height="315" src="' + $(this).attr('href') + '&rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.main-schedule-list-more a', function(e) {
+        $('.main-schedule-list').toggleClass('open');
         e.preventDefault();
     });
 
@@ -317,7 +333,7 @@ $(window).on('load resize', function() {
         });
     });
 
-    $('.main-reviews').each(function() {
+    $('.main-reviews-list').each(function() {
         var curList = $(this);
 
         curList.find('.main-reviews-item-text').css({'height': 'auto'});
