@@ -9,7 +9,7 @@ $(document).ready(function() {
     });
 
     $('.page-link').click(function(e) {
-        var curBlock = $($(this).attr('href'));
+        var curBlock = $(this.hash);
         if (curBlock.length == 1) {
             $('html, body').animate({'scrollTop': curBlock.offset().top - 100});
             e.preventDefault();
