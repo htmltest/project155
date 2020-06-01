@@ -418,6 +418,14 @@ function initForm(curForm) {
         var options = {
             minimumResultsForSearch: 20
         }
+        if (curSelect.parent().hasClass('form-select-ajax')) {
+            options['ajax'] = {
+                    url: curSelect.parent().attr('data-link'),
+                    dataType: 'json'
+            };
+            options['minimumInputLength'] = 3;
+            options['placeholder'] = curSelect.parent().attr('data-placeholder');
+        }
 
         curSelect.select2(options);
 
@@ -435,7 +443,7 @@ function initForm(curForm) {
             }
         });
 
-        if (curSelect.val() != '') {
+        if (curSelect.val() != '' && curSelect.val() !== null) {
             curSelect.trigger({type: 'select2:select'})
             curSelect.parent().find('.select2-container').addClass('select2-container--full');
         }
