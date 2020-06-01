@@ -106,7 +106,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 @media screen and (max-width:1169px) {
     .main-news {margin:100px 0 0 0}
     .main-news-container {margin:28px 0 0 0; border-top:1px solid #d7d7d7; padding:13px 0 0 0}
-    .main-news-list {width:auto; white-space:normal}
+    .main-news-list {width:auto; white-space:normal; float:none}
     .main-news-item {display:block; width:auto; padding:0; margin:24px 0 0 0}
     .main-news-item+.main-news-item+.main-news-item+.main-news-item {display:none}
     .main-news-item:last-child,
@@ -117,6 +117,9 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .main-news-item-title {display:inline; font-size:24px; line-height:31px; margin:0; font-weight:300; max-height:none}
     .main-news-item-date {display:inline; font-size:20px; line-height:31px; position:relative; left:auto; top:auto; color:#b7afaf; opacity:1}
     .main-news-item-date::before {content:"/"; color:#f6e080; font-weight:bold; margin:0 5px}
+    .main-news-all-container {float:none; width:auto}
+    .main-news-all-container .main-news-item {width:auto}
+    .main-news-all-container .main-news-item-inner {height:auto; border:none; padding:0}
 }
 
 .main-news-all {position:relative; height:190px; text-decoration:none; border:1px solid #e2e2e2; text-align:center; padding:76px 32px 0 32px; background:#fff}
@@ -124,7 +127,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-news-all .btn-mini::before {display:none}
 
 @media screen and (max-width:1169px) {
-    .main-news-all {height:auto; border:none; padding:39px 70px 0 70px; background:transparent; margin:29px 0 0 0; border-top:1px solid #d7d7d7}
+    .main-news-all {height:auto; border:none; padding:39px 0 0 0; background:transparent; margin:29px 0 0 0; border-top:1px solid #d7d7d7}
 }
 
 .main-types {padding:110px 0 0 0; position:relative}
@@ -1421,6 +1424,10 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-types-info {margin:55px 0 50px 0; border:1px solid #e2e2e2; padding:36px 220px 40px 40px; position:relative; background:#fff}
 .main-types-info::before {content:""; display:block; position:absolute; right:-11px; bottom:-11px; width:100%; height:100%; border-right:10px solid #ecf6fb; border-bottom:10px solid #ecf6fb; pointer-events:none; z-index:-1}
 
+@media screen and (max-width:1169px) {
+    .main-types-info {padding:36px 40px 40px 40px}
+}
+
 .main-types-reg {border:1px solid #e2e2e2; background:#fff; text-align:center; position:relative; padding:60px 0 66px 0}
 .main-types-reg::before {content:""; display:block; position:absolute; right:-11px; bottom:-11px; width:100%; height:100%; border-right:10px solid #ecf6fb; border-bottom:10px solid #ecf6fb; pointer-events:none; z-index:-1}
 .main-types-reg-title {font-size:20px; font-weight:500; line-height:30px; color:#393939}
@@ -1492,6 +1499,16 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-schedule-list.open+.main-schedule-list-more a::after {transform:rotate(-180deg)}
 .main-schedule-list.open+.main-schedule-list-more a em:nth-child(1) {display:none}
 .main-schedule-list.open+.main-schedule-list-more a em:nth-child(2) {display:inline}
+
+@media screen and (max-width:1169px) {
+    .main-schedule-list {width:auto}
+    .main-schedule-item {padding:0 0 0 59px}
+    .main-schedule-item-date {position:relative; right:auto; top:auto; margin-right:0}
+    .main-schedule-list-more {width:auto}
+    .main-schedule-item::before {left:18px}
+    .main-schedule-item.today::after {left:18px}
+    .main-schedule-item-status {left:8px}
+}
 
 .main-info {margin:99px 0 0 0}
 .main-info-container {position:relative}
@@ -1670,6 +1687,13 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-pf-right .contacts-list {margin:21px 0 0 0}
 .main-pf-right .contacts-item {display:block; padding:0; width:auto}
 
+@media screen and (max-width:1169px) {
+    .main-pf h2::after {display:none}
+    .main-pf-container::before {display:none}
+    .main-pf-content {float:none}
+    .main-pf-right {float:none; width:auto; margin:30px 0 0 0}
+}
+
 .main-pf-welcome-title {font-weight:600; font-size:24px; line-height:36px; color:#171717}
 .fonts-loaded .main-pf-welcome-title {font-family:FiraSans, sans-serif}
 .main-pf-welcome-title span {font-weight:normal}
@@ -1704,10 +1728,10 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .btn-pf:active::after {width:42px; right:21px}
 
 @media screen and (max-width:1169px) {
-    .btn {display:block; width:100%; padding:0; text-align:center; height:67px; line-height:67px; font-size:20px; font-weight:normal}
-    .btn::after {display:inline-block; vertical-align:middle; position:relative; right:auto; top:auto; margin:-2px 0 0 17px}
-    .btn:hover::after {right:auto; margin-right:-16px}
-    .btn:active::after {right:auto; margin-right:-16px}
+    .btn-pf {display:block; width:100%; padding:0; text-align:center; height:67px; line-height:67px; font-size:20px; font-weight:normal}
+    .btn-pf::after {display:inline-block; vertical-align:middle; position:relative; right:auto; top:auto; margin:-2px 0 0 17px}
+    .btn-pf:hover::after {right:auto; margin-right:-16px}
+    .btn-pf:active::after {right:auto; margin-right:-16px}
 }
 
 .main-pf-welcome-subtitle {margin:32px 0 0 0; font-weight:normal; font-size:20px; line-height:30px; color:#1e1e1e}

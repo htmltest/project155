@@ -553,6 +553,8 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
     .mobile-menu-list ul li::before {display:none}
     .mobile-menu-list ul li a {display:block; padding:27px 40px 30px 40px; text-decoration:none; color:#282828}
     .mobile-menu-list ul li.active a {background:#008cc9}
+    .mobile-menu-list ul li ul {font-size:20px; line-height:30px; border-top:1px solid rgba(162, 162, 162, 0.3)}
+    .mobile-menu-list ul li ul li a {display:block; padding:17px 40px 20px 80px; text-decoration:none; color:#282828}
 
     .mobile-menu-contacts {padding:0 40px 36px 40px}
     .mobile-menu-contacts-item {padding:17px 0 30px 0; border-top:1px solid rgba(162, 162, 162, 0.3)}
@@ -789,7 +791,7 @@ footer .container {position:relative}
 .footer-copyrights {font-weight:normal; font-size:12px; line-height:14px; color:#363636; margin:8px 0 0 0}
 
 @media screen and (max-width:1169px) {
-    .footer-copyrights {float:right; margin:47px 0 0 0; font-size:20px; line-height:30px; color:#686868}
+    .footer-copyrights {font-size:20px; line-height:30px; color:#686868; text-align:center}
 }
 
 .footer-links {float:right; font-weight:normal; font-size:12px; line-height:14px; color:#363636; margin:15px 0 0 0}
@@ -800,7 +802,7 @@ footer .container {position:relative}
 .footer-link a:hover {text-decoration:underline}
 
 @media screen and (max-width:1169px) {
-    .footer-links {margin:39px 0 0 0; float:left; font-size:20px; line-height:30px; color:#000}
+    .footer-links {display:none}
     .footer-link {float:none; margin:20px 0 0 0}
     .footer-link:first-child {margin:0}
     .footer-link a {color:#000}
