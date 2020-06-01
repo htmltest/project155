@@ -35,7 +35,7 @@
 }
 
 .main-welcome {position:relative}
-.main-welcome h1 {font-weight:normal; margin-top:71px; color:#272727}
+.main-welcome h1 {font-weight:normal; margin-top:0; padding-top:71px; color:#272727}
 .main-welcome h1 span {font-weight:800; color:#008cc9}
 .main-welcome-period-title {margin:33px 0 0 0; text-transform:uppercase; font-size:14px; line-height:21px; font-weight:normal; color:#7a7a7a; letter-spacing:0.03em}
 .fonts-loaded .main-welcome-period-title {font-family:FiraSans, sans-serif}
@@ -44,7 +44,7 @@
 
 @media screen and (max-width:1169px) {
     .main-welcome h1 {font-weight:bold; max-width:none}
-    .main-welcome h1 {margin-top:84px}
+    .main-welcome h1 {margin-top:0; padding-top:84px}
     .main-welcome h1 br {display:none}
     .main-welcome-period-title {margin:35px 0 0 0; text-transform:none; font-size:20px; line-height:30px; color:#7a7a7a; letter-spacing:0}
     .main-welcome-period-dates {margin:3px 0 0 0; font-size:30px; line-height:45px}
@@ -127,7 +127,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .main-news-all {height:auto; border:none; padding:39px 70px 0 70px; background:transparent; margin:29px 0 0 0; border-top:1px solid #d7d7d7}
 }
 
-.main-types {margin:110px 0 0 0; position:relative}
+.main-types {padding:110px 0 0 0; position:relative}
 .main-types .container {position:relative}
 
 .main-reviews {margin:100px 0 0 0; position:relative}
@@ -524,9 +524,16 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .archive-gallery-item-inner a {display:block}
 .archive-gallery-item-inner img {display:block; width:100%}
 
+.window-catalogue-container .archive-gallery {margin-bottom:0; margin-right:-5px; margin-left:-5px}
+.window-catalogue-container .archive-gallery-item {width:16.66%}
+.window-catalogue-container .archive-gallery-item-inner {padding:10px 5px 0 5px}
+
 @media screen and (max-width:1169px) {
     .archive-gallery {margin:10px -10px 86px -10px}
     .archive-gallery-item {width:50%}
+
+    .window-catalogue-container .archive-gallery {margin-bottom:0; margin-right:-5px; margin-left:-5px}
+    .window-catalogue-container .archive-gallery-item {width:50%}
 }
 
 .contacts-header {margin:39px 0 0 0; padding:0 0 28px 0; border-bottom:1px solid #dfdfdf}
@@ -1459,6 +1466,8 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-schedule-list-inner {position:relative}
 .main-schedule-item {position:relative; margin:42px 0 0 0; padding:0 0 0 198px}
 .main-schedule-item:first-child {margin:0}
+.main-schedule-item.today:first-child {margin:14px 0 0 0}
+.main-schedule-item.today:last-child {margin:0 0 14px 0}
 .main-schedule-item::before {content:""; display:block; position:absolute; left:157px; top:-42px; bottom:0; width:1px; background:#cecece}
 .main-schedule-item.past::before {background:#008cc9}
 .main-schedule-item.today::after {content:""; display:block; position:absolute; left:157px; top:-42px; bottom:100%; margin-bottom:-2px; width:1px; background:#008cc9}

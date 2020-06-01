@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('.main-welcome-link a, .main-conf-reg a, .faq-menu a').click(function(e) {
         var curBlock = $($(this).attr('href'));
         if (curBlock.length == 1) {
-            $('html, body').animate({'scrollTop': curBlock.offset().top - 100});
+            $('html, body').animate({'scrollTop': curBlock.offset().top});
         }
         e.preventDefault();
     });
@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.page-link').click(function(e) {
         var curBlock = $(this.hash);
         if (curBlock.length == 1) {
-            $('html, body').animate({'scrollTop': curBlock.offset().top - 100});
+            $('html, body').animate({'scrollTop': curBlock.offset().top});
             e.preventDefault();
         }
     });

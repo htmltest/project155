@@ -442,7 +442,35 @@ function initForm(curForm) {
     });
 
     curForm.validate({
-        ignore: ''
+        ignore: '',
+        submitHandler: function(form) {
+            var curForm = $(form);
+            if (curForm.hasClass('ajax-form')) {
+                curForm.addClass('loading');
+                var formData = new FormData(form);
+
+                if (curForm.find('[type=file]').length != 0) {
+                    var file = curForm.find('[type=file]')[0].files[0];
+                    formData.append('file', file);
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: curForm.attr('action'),
+                    processData: false,
+                    contentType: false,
+                    dataType: 'html',
+                    data: formData,
+                    cache: false
+                }).done(function(html) {
+                    curForm.html(html);
+                    initForm(curForm);
+                    curForm.removeClass('loading');
+                });
+            } else {
+                form.submit();
+            }
+        }
     });
 }
 
@@ -554,7 +582,30 @@ function windowOpen(linkWindow, dataWindow) {
             });
         });
 
-    });
+        var windowGalleryCount = 0;
+        $('.window .archive-gallery img').one('load', function() {
+            windowGalleryCount++;
+            if (windowGalleryCount >= $('.window .archive-gallery img').length) {
+                $('.window .archive-gallery').each(function() {
+                    var shuffleInstance = new Shuffle(this, {
+                        itemSelector: '.archive-gallery-item',
+                        roundTransforms: false,
+                        throttleTime: 0
+                    });
+                });
+            }
+        });
+
+        $('.window .archive-gallery').each(function() {
+            $(this).find('.archive-gallery-item-inner a').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+
+   });
 }
 
 function windowClose() {
