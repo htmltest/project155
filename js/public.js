@@ -64,7 +64,7 @@ $(document).ready(function() {
                                 '<path class="main-slider-hexagon-6" d="M628.047 519.499L691.41 629.247L628.047 738.995L501.32 738.995L437.957 629.247L501.32 519.499L628.047 519.499Z" fill="#C4C4C4"/>' +
                             '</mask>' +
                             '<g mask="url(#mask' + curID + ')">' +
-                                '<image id="image' + curID + '" width="738" height="802" xlink:href="' + curItem.attr('data-image') + '"/>' +
+                                '<image id="image' + curID + '" width="612" height="577" x="15" y="180" xlink:href="' + curItem.attr('data-image') + '"/>' +
                             '</g>' +
                         '</svg>');
             curID++;
@@ -403,6 +403,12 @@ $(window).on('load resize', function() {
                 }
             });
         });
+    });
+    
+    $('.main-schedule-list').each(function() {
+        $('.main-schedule-list').removeClass('open');
+        var curTop = $('.main-schedule-list .today').offset().top - $('.main-schedule-list').offset().top;
+        $('.main-schedule-list-inner').css({'top': $('.main-schedule-list').outerHeight() / 2 - curTop});
     });
 });
 

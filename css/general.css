@@ -27,7 +27,7 @@ strong, b {font-weight:normal}
 
 h1 {margin:102px 0 18px 0; padding:0; font-weight:900; font-size:30px; line-height:45px; color:#171717}
 .fonts-loaded h1 {font-family:FiraSans, sans-serif}
-h2 {margin:44px 0 10px 0; padding:0; font-weight:800; font-size:24px; line-height:36px; color:#171717}
+h2 {margin:44px 0 10px 0; padding:0; font-weight:500; font-size:24px; line-height:36px; color:#171717}
 .fonts-loaded h2 {font-family:FiraSans, sans-serif}
 h3 {margin:34px 0 14px 0; padding:0; font-weight:normal; font-size:20px; line-height:30px; color:#171717}
 .fonts-loaded h3 {font-family:FiraSans, sans-serif}
@@ -277,7 +277,7 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
     .form-policy span::before {top:-4px; width:28px; height:28px}
 }
 
-.form-submit {margin:60px 0 0 0; text-align:right}
+.form-submit {margin:40px 0 0 0; text-align:right}
 
 @media screen and (max-width:1169px) {
     .form-submit {margin:44px 0 0 0; text-align:left}
@@ -370,7 +370,7 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
     .tabs {margin:30px 0}
     .tabs-container {margin:0}
     .tabs-content {position:relative; left:auto; top:auto; opacity:1; transform:none; margin:0 0 -1px 0}
-    .tabs-content-title {display:block; margin:0 -20px; padding:34px 85px 32px 20px; border:1px solid #d0d0d0; font-size:24px; line-height:35px; cursor:pointer; font-weight:normal; color:#000; background:#fef8dc; position:relative}
+    .tabs-content-title {display:block; margin:0 -20px; padding:34px 85px 32px 20px; border:1px solid #d0d0d0; font-size:24px; line-height:35px; cursor:pointer; font-weight:normal; color:#000; background:#ecf6fb; position:relative}
     .fonts-loaded .tabs-content-title {font-family:FiraSans, sans-serif}
     .tabs-content-title::after {content:""; display:block; position:absolute; right:19px; top:50%; width:46px; height:46px; background:url(../images/tabs-content-title.svg) no-repeat; margin-top:-23px}
     .tabs-content.open .tabs-content-title::after {transform:rotate(180deg)}
@@ -401,7 +401,7 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
     .pager a.pager-next {position:absolute; right:0; top:0; margin:0; background:url(../images/pager-next-mobile.svg) no-repeat center; width:14px}
 }
 
-.container {max-width:1170px; margin:0 auto}
+.container {max-width:1120px; margin:0 auto}
 .container::after {content:""; display:block; clear:both}
 
 @media screen and (max-width:1169px) {
