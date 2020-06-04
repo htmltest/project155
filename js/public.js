@@ -291,6 +291,16 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', '.main-days-content-title', function(e) {
+        $(this).parents().filter('.main-days-content').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.partcipant-prefs-content-mobile-title', function(e) {
+        $(this).parents().filter('.partcipant-prefs-content').toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize', function() {
