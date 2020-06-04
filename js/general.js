@@ -627,3 +627,59 @@ function windowClose() {
         $(window).scrollTop($('.wrapper').data('curScroll'));
     }
 }
+
+const googleTranslateConfig = {
+    lang: 'ru'
+};
+
+function TranslateInit() {
+
+    var code = TranslateGetCode();
+    $('.header-lang li').removeClass('active');
+    $('.header-lang li[data-google-lang="' + code + '"]').addClass('active');
+    $('.header-lang-link').removeClass('lang-list-ru lang-list-en lang-list-it lang-list-fr').addClass('lang-list-' + code);
+
+    if (code == googleTranslateConfig.lang) {
+        TranslateClearCookie();
+    }
+
+    new google.translate.TranslateElement({
+        pageLanguage: googleTranslateConfig.lang
+    });
+
+    $('[data-google-lang] a').click(function(e) {
+        TranslateSetCookie($(this).parent().attr('data-google-lang'));
+        $('.header-lang').removeClass('open');
+        e.preventDefault();
+        window.location.reload();
+    });
+}
+
+function TranslateGetCode() {
+    var lang = ($.cookie('googtrans') != undefined && $.cookie('googtrans') != 'null') ? $.cookie('googtrans') : googleTranslateConfig.lang;
+    return lang.substr(-2);
+}
+
+function TranslateClearCookie() {
+    $.removeCookie("googtrans");
+    $.removeCookie("googtrans", {
+        domain: "." + document.domain
+    });
+    $.cookie("googtrans", null, {
+        expires: 365
+    });
+    $.cookie("googtrans", null, {
+        domain: "." + document.domain,
+        expires: 365
+    });
+}
+
+function TranslateSetCookie(code) {
+    $.cookie("googtrans", "\/auto\/" + code, {
+        expires: 365
+    });
+    $.cookie("googtrans", "\/auto\/" + code, {
+        domain: "." + document.domain,
+        expires: 365
+    });
+}

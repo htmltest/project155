@@ -517,6 +517,11 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
 .header-lang ul li a:hover {background:#ecf7fb}
 .header-lang ul li.active a {background:#008cc9; font-weight:600; color:#fff}
 
+.lang-list-ru::before {content:"Ru"}
+.lang-list-en::before {content:"En"}
+.lang-list-it::before {content:"It"}
+.lang-list-fr::before {content:"Fr"}
+
 @media screen and (max-width:1169px) {
     .header-lang {display:none}
 }
@@ -872,3 +877,5 @@ footer .container {position:relative}
     .text-with-hint-popup-links .btn-reset {height:41px; line-height:41px; font-size:18px}
     .text-with-hint-popup-close {display:block; position:absolute; right:0; top:0; width:60px; height:60px; background:url(../images/text-with-hint-popup-close.svg) no-repeat center}
 }
+
+.skiptranslate {display:none !important}
