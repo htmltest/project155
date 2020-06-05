@@ -307,6 +307,19 @@ $(document).ready(function() {
         }
     });
 
+    $('.mobile-menu-list ul li').each(function() {
+        if ($(this).find('ul').length > 0) {
+            $(this).addClass('with-submenu');
+        }
+    });
+
+    $('.mobile-menu-list ul li a').click(function(e) {
+        if ($(this).parent().find('ul').length > 0) {
+            $(this).parent().toggleClass('open');
+            e.preventDefault();
+        }
+    });
+
 });
 
 function initForm(curForm) {
@@ -636,8 +649,11 @@ function TranslateInit() {
 
     var code = TranslateGetCode();
     $('.header-lang li').removeClass('active');
+    $('.mobile-menu-header-lang li').removeClass('active');
     $('.header-lang li[data-google-lang="' + code + '"]').addClass('active');
+    $('.mobile-menu-header-lang li[data-google-lang="' + code + '"]').addClass('active');
     $('.header-lang-link').removeClass('lang-list-ru lang-list-en lang-list-it lang-list-fr').addClass('lang-list-' + code);
+    $('.hmobile-menu-eader-lang-link').removeClass('lang-list-ru lang-list-en lang-list-it lang-list-fr').addClass('lang-list-' + code);
 
     if (code == googleTranslateConfig.lang) {
         TranslateClearCookie();
@@ -650,6 +666,7 @@ function TranslateInit() {
     $('[data-google-lang] a').click(function(e) {
         TranslateSetCookie($(this).parent().attr('data-google-lang'));
         $('.header-lang').removeClass('open');
+        $('.mobile-menu-header-lang').removeClass('open');
         e.preventDefault();
         window.location.reload();
     });

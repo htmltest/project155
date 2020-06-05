@@ -532,12 +532,12 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
     .mobile-menu {position:fixed; left:0; top:0; right:0; bottom:0; z-index:998}
     .mobile-menu-open .mobile-menu {display:block}
     .mobile-menu-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.3); cursor:pointer}
-    .mobile-menu-container {position:absolute; width:374px; top:0; bottom:0; right:0; background:#fff}
+    .mobile-menu-container {position:absolute; left:0; top:0; bottom:0; right:0; background:#fff}
 
     .mobile-menu-header {height:87px; border-bottom:1px solid #d0d0d0; padding:0 24px 0 40px}
     .mobile-menu-header::after {content:""; display:block; clear:both}
     .mobile-menu-header-user {float:left; margin:14px 31px 0 0}
-    .mobile-menu-header-user-link {display:block; width:56px; height:56px; background:#2e9ecf url(../images/header-user-link.svg) no-repeat center; background-size:26px 28px; border-radius:50%}
+    .mobile-menu-header-user-link {display:block; width:56px; height:56px; background:#cce8f4 url(../images/header-user-link.svg) no-repeat center; background-size:26px 28px; border-radius:50%}
     .mobile-menu-header-lang {float:left; margin:14px 0 0 0; width:56px; position:relative}
     .mobile-menu-header-lang-link {display:block; height:56px; text-align:center; border:1px solid #d0d0d0; font-weight:normal; font-size:26px; line-height:54px; text-decoration:none; color:#494949}
     .mobile-menu-header-lang ul {display:none; position:absolute; left:-7px; top:100%; width:70px; background:#fff; z-index:99; border:1px solid #d0d0d0; box-shadow:0px 4px 10px rgba(142, 141, 141, 0.25); margin:16px 0 0 0; padding:0; list-style:none}
@@ -547,35 +547,33 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
     .mobile-menu-header-lang ul li::before {display:none}
     .mobile-menu-header-lang ul li:first-child {border-top:none}
     .mobile-menu-header-lang ul li a {display:block; text-align:center; font-weight:normal; font-size:26px; line-height:54px; height:54px; color:#000; text-decoration:none}
-    .mobile-menu-header-lang ul li.active a {background:#008cc9}
+    .mobile-menu-header-lang ul li.active a {background:#008cc9; color:#fff; font-weight:600}
     .mobile-menu-close {display:block; float:right; margin:28px 0 0 0; width:28px; height:27px; background:url(../images/mobile-menu-close.svg) no-repeat}
 
-    .mobile-menu-content {position:absolute; left:0; top:87px; right:0; bottom:0; overflow:auto; background:#fffcf0}
+    .mobile-menu-content {position:absolute; left:0; top:87px; right:0; bottom:0; overflow:auto; background:#fff}
+    .mobile-menu-user {border-top:4px solid #008cc9; border-bottom:4px solid #008cc9; padding:20px 20px 23px 20px}
+    .mobile-menu-user-name {font-weight:normal; font-size:22px; line-height:29px; color:#000}
+    .mobile-menu-user-company {margin:4px 0 0 0; font-size:20px; line-height:30px; color:#171717}
     .mobile-menu-list {background:#fff; font-weight:500; font-size:24px; line-height:36px}
     .mobile-menu-list ul {margin:0; padding:0; list-style:none; border-bottom:1px solid rgba(162, 162, 162, 0.3)}
     .mobile-menu-list ul li {margin:0; padding:0; border-top:1px solid rgba(162, 162, 162, 0.3)}
     .mobile-menu-list ul li:first-child {border-top:none}
     .mobile-menu-list ul li::before {display:none}
-    .mobile-menu-list ul li a {display:block; padding:27px 40px 30px 40px; text-decoration:none; color:#282828}
-    .mobile-menu-list ul li.active a {background:#008cc9}
-    .mobile-menu-list ul li ul {font-size:20px; line-height:30px; border-top:1px solid rgba(162, 162, 162, 0.3)}
-    .mobile-menu-list ul li ul li a {display:block; padding:17px 40px 20px 80px; text-decoration:none; color:#282828}
+    .mobile-menu-list ul li a {display:block; padding:23px 20px 27px 20px; text-decoration:none; color:#282828}
+    .mobile-menu-list > ul > li.with-submenu > a {position:relative; padding-right:70px}
+    .mobile-menu-list > ul > li.with-submenu > a::after {content:""; display:block; position:absolute; right:22px; top:35px; width:26px; height:15px; background:url(../images/mobile-menu-arrow.svg) no-repeat}
+    .mobile-menu-list > ul > li.with-submenu.active > a::after {background:url(../images/mobile-menu-arrow-active.svg) no-repeat}
+    .mobile-menu-list > ul > li.with-submenu.open > a::after {transform:rotate(-180deg)}
+    .mobile-menu-list > ul > li.active > a {background:#008cc9; color:#fff}
+    .mobile-menu-list ul li ul {display:none; font-size:22px; line-height:22px; border-top:1px solid rgba(162, 162, 162, 0.3); background:#ecf7fb}
+    .mobile-menu-list ul li.open ul {display:block}
+    .mobile-menu-list ul li ul li a {display:block; padding:26px 40px 31px 40px; text-decoration:none; color:#000}
+    .mobile-menu-list ul li ul li.active a {background:#008cc9; color:#fff}
 
-    .mobile-menu-contacts {padding:0 40px 36px 40px}
-    .mobile-menu-contacts-item {padding:17px 0 30px 0; border-top:1px solid rgba(162, 162, 162, 0.3)}
-    .mobile-menu-contacts-item:first-child {border-top:none}
-    .mobile-menu-contacts-item::after {content:""; display:block; clear:both}
-    .mobile-menu-contacts-item-photo {float:left; width:85px; line-height:0; padding:3px 0 0 0}
-    .mobile-menu-contacts-item-photo img {display:block; width:100%; border-radius:50%}
-    .mobile-menu-contacts-item-content {margin:0 0 0 105px}
-    .mobile-menu-contacts-item-name {font-weight:600; font-size:22px; line-height:33px; color:#171717; padding:0 0 2px 0}
-    .mobile-menu-contacts-item-value {font-size:20px; line-height:26px}
-    .mobile-menu-contacts-item-value a {color:#000; text-decoration:none}
-    .mobile-menu-contacts-item-social {margin:15px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
-    .mobile-menu-contacts-item-social a {display:inline-block; vertical-align:top; margin:0 0 0 15px; opacity:0.4}
-    .mobile-menu-contacts-item-social a:first-child {margin:0}
+    .mobile-menu-contacts {padding:13px 20px 0 20px; position:relative; z-index:1}
+    .mobile-menu-contacts .contacts-item-inner::before {border-color:#ecf7fb}
 
-    .mobile-menu-social {margin:5px 0 0 0; border-top:1px solid rgba(162, 162, 162, 0.3); padding:32px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
+    .mobile-menu-social {margin:51px -20px 0 -20px; padding:32px 0 36px 0; font-size:0; line-height:0; letter-spacing:-1px; text-align:center; background:#ecf7fb}
     .mobile-menu-social a {display:inline-block; vertical-align:top; margin:0 0 0 20px}
     .mobile-menu-social a:first-child {margin:0}
     .mobile-menu-social img {width:40px}
@@ -610,11 +608,11 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
     .contacts-item-mobile-inner img {display:block; width:64px; height:64px}
 }
 
-.page-404 {margin:80px 0 0 0}
+.page-404 {margin:93px 0 0 0}
 .page-404-title {text-align:center; font-weight:bold; font-size:200px; line-height:300px; color:#393939}
 .fonts-loaded .page-404-title {font-family:FiraSans, sans-serif}
 .page-404-title-inner {display:inline-block; vertical-align:top; position:relative}
-.page-404-title-inner span {position:absolute; left:10px; top:10px; z-index:-1; color:#f7d546}
+.page-404-title-inner span {position:absolute; left:10px; top:10px; z-index:-1; color:#cce8f4}
 .page-404-subtitle {font-weight:normal; font-size:22px; line-height:33px; color:#171717; margin:-22px 0 0 0; text-align:center}
 .page-404-text {font-size:18px; line-height:27px; margin:11px auto 0 auto; max-width:540px; text-align:center}
 .page-404-content {margin:60px auto 166px auto; padding:48px 0 65px 0; width:829px; position:relative; background:#fff; border:1px solid #e2e2e2; border-radius:6px}
@@ -799,7 +797,7 @@ footer .container {position:relative}
     .footer-copyrights {font-size:20px; line-height:30px; color:#686868; text-align:center}
 }
 
-.footer-links {float:right; font-weight:normal; font-size:12px; line-height:14px; color:#363636; margin:15px 0 0 0}
+.footer-links {float:right; font-weight:normal; font-size:12px; line-height:47px; color:#363636}
 .footer-links::after {content:""; display:block; clear:both}
 .footer-link {float:left; margin:0 0 0 13px}
 .footer-link:first-child {margin:0}
