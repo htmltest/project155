@@ -308,19 +308,21 @@ $(document).ready(function() {
     });
 
     $('body').on('click', '.registration-list-btn a', function(e) {
-        var newHTML = $('.list-template').html();
-        var newID = $('.registration-list .registration-item').length;
+        var curForm = $(this).parents().filter('form');
+        var newHTML = curForm.parent().find('.list-template').html();
+        var newID = curForm.find('.registration-list .registration-item').length;
         newHTML = newHTML.replace(/_COUNTER_/g, newID + 1);
         newHTML = newHTML.replace(/_ID_/g, newID);
-        $('.registration-list').append(newHTML);
+        curForm.find('.registration-list').append(newHTML);
         e.preventDefault();
     });
 
     $('body').on('click', '.registration-recommend-btn a', function(e) {
-        var newHTML = $('.recommend-template').html();
-        var newID = $('.recommend-list .registration-item').length;
+        var curForm = $(this).parents().filter('form');
+        var newHTML = curForm.parent().find('.recommend-template').html();
+        var newID = curForm.find('.recommend-list .registration-item').length;
         newHTML = newHTML.replace(/_ID_/g, newID);
-        $('.recommend-list').append(newHTML);
+        curForm.find('.recommend-list').append(newHTML);
         e.preventDefault();
     });
 

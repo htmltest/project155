@@ -323,6 +323,8 @@ $(document).ready(function() {
 });
 
 function initForm(curForm) {
+    if (curForm.hasClass('cat-ajax-form')) return;
+
     curForm.find('.form-input input, .form-input textarea').each(function() {
         if ($(this).val() != '') {
             $(this).parent().addClass('full');
@@ -598,6 +600,18 @@ function windowOpen(linkWindow, dataWindow) {
             curTabsContainer.find('> .tabs-content').eq(0).addClass('active');
             curTabsMenu.html(newHTML);
             curTabsMenu.find('.tabs-menu-item').eq(0).addClass('active');
+            var newLink = $('<a href="' + linkWindow + '"></a>');
+            var hashLink = newLink[0].hash;
+            if (hashLink !== '') {
+                var curTab = curTabs.find($(hashLink));
+                if (curTab.length == 1) {
+                    var curIndex = curTabsContainer.find('> .tabs-content').index(curTab);
+                    curTabsMenu.find('.tabs-menu-item.active').removeClass('active');
+                    curTabsMenu.find('.tabs-menu-item').eq(curIndex).addClass('active');
+                    curTabsContainer.find('> .tabs-content.active').removeClass('active');
+                    curTabsContainer.find('> .tabs-content').eq(curIndex).addClass('active');
+                }
+            }
             curTabsMenu.mCustomScrollbar({
                 axis: 'x'
             });

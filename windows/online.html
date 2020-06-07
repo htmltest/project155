@@ -1,0 +1,64 @@
+<div class="window-auth window-online">
+    <div class="window-title">Записаться на онлайн-встречу</div>
+    <form action="ajax/form-success.html" method="post" class="ajax-form">
+        <h3>Участник</h3>
+        
+        <div class="remind-company">
+            <div class="remind-company-inner">
+                <div class="remind-company-logo"><img src="files/catalogue-logo-01.png" alt="" /></div>
+                <div class="remind-company-text">
+                    <div class="remind-company-name">Акос тэкс</div>
+                    <div class="remind-company-descr">«Вежливые люди», Ricardo ricco</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="window-online-date">
+            <h3>Дата онлайн-встречи</h3>
+            <div class="window-online-date-text">Выберите, пожалуйста, дату встречи</div>
+            <div class="window-online-date-list">
+                <label><input type="radio" name="date" value="03.06" checked="checked" /><span>03.06<em>ср</em></span></label>
+                <label><input type="radio" name="date" value="04.06" /><span>04.06<em>пн</em></span></label>
+                <label><input type="radio" name="date" value="05.06" /><span>05.06<em>ср</em></span></label>
+                <label><input type="radio" name="date" value="06.06" /><span>06.06<em>чт</em></span></label>
+                <label><input type="radio" name="date" value="07.06" /><span>07.06<em>чт</em></span></label>
+                <label><input type="radio" name="date" value="08.06" /><span>08.06<em>пт</em></span></label>
+            </div>
+        </div>
+
+        <div class="window-online-time">
+            <h3>Выбрать время начала</h3>
+            <div class="window-online-date-text">Выберите, пожалуйста, время встречи.<br /> Одна встреча проходит в течении 1 часа.</div>
+            <div class="window-online-time-list">
+                <label><input type="radio" name="time" value="8:00" disabled="disabled" /><span>8:00</span></label>
+                <label><input type="radio" name="time" value="9:00" /><span>9:00</span></label>
+                <label><input type="radio" name="time" value="10:00" disabled="disabled" /><span>10:00</span></label>
+                <label><input type="radio" name="time" value="11:00" /><span>11:00</span></label>
+                <label><input type="radio" name="time" value="12:00" /><span>12:00</span></label>
+                <label><input type="radio" name="time" value="13:00" disabled="disabled" /><span>13:00</span></label>
+                <label><input type="radio" name="time" value="14:00" /><span>14:00</span></label>
+                <label><input type="radio" name="time" value="15:00" disabled="disabled" /><span>15:00</span></label>
+                <label><input type="radio" name="time" value="16:00" /><span>16:00</span></label>
+                <label><input type="radio" name="time" value="17:00" checked="checked" /><span>17:00</span></label>
+            </div>
+        </div>
+
+        <div class="window-online-type">
+            <h3>Выбор способа связи</h3>
+            <div class="window-online-date-text">Эти виды связи предпочтительны для<br /> представителя фабрики. Выберите удобный вам</div>
+            <div class="form-radio">
+                <label><input type="radio" name="type" value="zoom" checked="checked" /><span><img src="images/window-online-zoom.svg" alt="" />Zoom</span></label>
+            </div>
+            <div class="form-radio">
+                <label><input type="radio" name="type" value="skype" /><span><img src="images/window-online-skype.svg" alt="" />Skype</span></label>
+            </div>
+            <div class="form-radio">
+                <label><input type="radio" name="type" value="whatsapp" /><span><img src="images/window-online-whatsapp.svg" alt="" />WhatsApp</span></label>
+            </div>
+        </div>
+
+        <div class="window-auth-ctrl">
+            <div class="form-submit"><button type="submit" class="btn btn-mini">Подтвердить встречу</button></div>
+        </div>
+    </form>
+</div>

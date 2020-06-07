@@ -545,8 +545,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 
 .window-catalogue-text .archive-card-info-importants {margin:0 0 40px 0}
 
-.archive-card-info-btn {margin:58px 0 0 0}
-.archive-card-info-importants+.archive-card-info-btn {margin:40px 0 0 0}
+.archive-card-info-btn {margin:40px 0}
 .archive-card-info-btn .btn {padding:0 71px 0 48px}
 .archive-card-descr {display:table-cell; vertical-align:top; padding:0 60px 0 0; direction:ltr}
 .archive-card-descr > *:first-child {margin-top:0}
@@ -757,7 +756,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .registration-how-step-window::after {width:25px; height:25px; left:-13px; margin-top:-12.5px}
 }
 
-.registration-list-title {font-size:14px; line-height:21px; margin:4px 0 0 0; color:#313131}
+.registration-list-title {font-size:14px; line-height:21px; margin:4px 0 0 0; color:#313131; text-align:left}
 
 .registration-item {margin:25px 0 0 0}
 .registration-item:first-child {margin:15px 0 0 0}
@@ -899,33 +898,43 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .window-auth form {margin:0; padding:18px 30px 0 40px; text-align:center}
+.window-online form {padding:23px 56px 0 40px}
 
 @media screen and (max-width:1169px) {
     .window-auth form {margin:30px 19px 0 19px; padding:0; text-align:left}
+    .window-online form {padding:30px 19px 0 19px}
     .window-auth .auth-social-title {margin:38px 0 0 0}
     .window-auth .auth-social {text-align:center}
 }
 
 .window-auth-ctrl {margin:40px -30px 0 -40px; background:#d9eef7; text-align:center; padding:25px 0; direction:rtl}
+.window-online .window-auth-ctrl {margin-left:-40px; margin-right:-56px}
 .window-auth-ctrl .form-submit {display:inline-block; vertical-align:middle; margin:0; direction:ltr; z-index:1}
-.window-auth-ctrl .auth-forgot {display:inline-block; vertical-align:middle; margin:0; padding:0; border:none; direction:ltr; margin:0 25px 0 0}
 .window-auth-ctrl .btn-mini::before {display:none}
 
 @media screen and (max-width:1169px) {
     .window-auth-ctrl {margin:46px -19px 0 -19px; padding:30px 0 40px 0; direction:ltr}
+    .window-online .window-auth-ctrl {margin-left:-19px; margin-right:-19px}
     .window-auth-ctrl .form-submit {display:block; width:308px; margin:0 auto}
     .window-auth-ctrl .form-submit .btn {padding:0; width:100%}
     .window-auth-ctrl .auth-forgot {display:block; margin:28px 0 0 0; font-weight:normal}
     .window-auth-ctrl .btn-mini::after {display:none}
 }
 
-.window-auth .registration-side-title {margin:3px 0 0 0; text-align:left; max-width:none}
-.window-auth .registration-side-contacts {margin:24px 0 70px 0; text-align:left}
+.window-auth .auth-social-title {margin:30px 0 0 0}
+
+.window-auth .forgot-help {margin:14px -30px 0 -40px; padding:28px 0 0 0}
+.window-auth .forgot-help-window-registration {margin:0; padding:24px 0 0 0; border-top:none}
+.window-auth .forgot-help-contacts {float:none; width:377px; margin:0 auto}
+.window-auth .forgot-help-feedback {float:none; margin:30px auto 0 auto; padding:0 0 45px 0}
+.window-auth .forgot-auth {margin:33px 0 0 0}
+
+.window-auth .registration-side-title {margin:40px auto 0 auto; text-align:center; max-width:377px}
 .window-auth .contacts-item-inner {z-index:1}
 .window-auth .contacts-item-inner::before {z-index:0}
 .window-auth h3 {text-align:left; font-weight:normal}
 .window-auth form > h3:first-child {margin-top:11px}
-.window-auth .registration-zones {margin-bottom:37px}
+.window-auth .registration-zones {padding-bottom:0}
 
 @media screen and (max-width:1169px) {
     .window-auth .registration-side-title {text-align:left; margin:40px 0 0 0}
@@ -1304,7 +1313,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .window-catalogue-info-country {font-size:16px; line-height:23px; font-weight:normal}
 .window-catalogue-info-country-item {margin:10px 0 0 0; position:relative; padding:0 0 0 42px}
 .window-catalogue-info-country-item:first-child {margin:0}
-.window-catalogue-info-country-item img {position:absolute; left:0; top:-2px; width:30px; display:block}
+.window-catalogue-info-country-item img {position:absolute; left:0; top:0; width:30px; display:block}
 .window-catalogue-info-country-item span {display:block; font-size:14px; line-height:21px; color:#000; font-weight:300}
 
 @media screen and (max-width:1169px) {
@@ -1359,7 +1368,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .window-catalogue-prev,
-.window-catalogue-next {display:block; position:absolute; z-index:2; top:50%; width:40px; height:40px; border:1px solid #008cc9; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#008cc9; transform:translateY(-50%); transition:all 0.2s}
+.window-catalogue-next {display:block; position:absolute; z-index:2; top:292px; width:40px; height:40px; border:1px solid #008cc9; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#008cc9; transition:all 0.2s}
 .window-catalogue-prev {left:-90px}
 .window-catalogue-next {right:-90px}
 .window-catalogue-prev::before {content:""; display:block; width:8px; height:13px; background:url(../images/news-prev.svg) no-repeat; position:absolute; left:14px; top:13px}
@@ -1872,7 +1881,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 
 .faq-feedback {margin:80px 0 0 0}
 .faq-feedback-text {max-width:598px; margin:12px 0 0 0}
-.faq-feedback .forgot-help {margin:24px 0 0 0; border-bottom:none; padding:0}
+.faq-feedback .forgot-help {margin:24px 0 0 0; border-top:none; padding:0}
 .faq-feedback .forgot-help-contacts {margin:0}
 .faq-feedback .forgot-help-feedback {float:left; margin:24px 0 0 40px; text-align:center}
 
@@ -1926,6 +1935,7 @@ a.catalogue-card-faq-new::before {content:""; display:inline-block; vertical-ali
 a.catalogue-card-faq-link {float:left; text-decoration:none; margin:8px 0 0 20px; font-weight:normal; font-size:16px; line-height:24px; color:#272727; border-bottom:1px dashed #bababa}
 a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 
+.catalogue-card-next {margin:122px 0 0 0}
 .catalogue-card-next-day {margin:10px -20px 0 0}
 .catalogue-card-next-day::after {content:""; display:block; clear:both}
 .catalogue-card-next-day-date {float:left; margin:3px 0 0 0; font-size:24px; line-height:36px; color:#171717}
@@ -1941,3 +1951,66 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .catalogue-cart-speech::before {content:""; display:block; width:32px; height:32px; position:absolute; left:0; top:50%; margin-top:-16px; background:url(../images/catalogue-card-speech.svg) no-repeat}
 .catalogue-cart-speech a {color:#171717; text-decoration:underline}
 .catalogue-cart-speech a:hover {text-decoration:none}
+
+.catalogue-card-speech-video {margin:117px 0 0 0}
+.catalogue-card-speech-video-record {margin:25px 0 0 0; font-weight:normal; font-size:18px; line-height:27px; color:#171717; padding:0 0 0 64px; position:relative}
+.catalogue-card-speech-video-record::before {content:""; display:block; width:44px; height:44px; position:absolute; left:0; top:50%; margin-top:-22px; background:url(../images/catalogue-card-speech-video-record.svg) no-repeat}
+.catalogue-card-speech-video-record a {text-decoration:none; border-bottom:1px solid #bababa}
+.catalogue-card-speech-video-record a:hover {border-bottom-color:transparent}
+
+.window-online-date {margin:26px 0 0 0; text-align:left}
+.window-online-date h3 {margin:0}
+.window-online-date-text {margin:4px 0 0 0; font-size:14px; line-height:21px; color:#313131}
+.window-online-date-list {margin:10px 0 0 0}
+.window-online-date-list::after {content:""; display:block; clear:both}
+.window-online-date-list label {display:block; float:left; margin:10px 10px 0 0; width:110px; height:41px; cursor:pointer}
+.window-online-date-list label input {display:none}
+.window-online-date-list label span {display:block; position:relative; height:41px; background:#e5f3fa; text-align:center; line-height:41px; color:#000; font-weight:normal; font-size:18px; line-height:41px; transition:all 0.2s}
+.window-online-date-list label input:checked+span::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border:2px solid #008cc9}
+.window-online-date-list label span em {font-style:normal; font-weight:300; margin:0 0 0 8px; font-size:16px; color:#595959}
+
+.window-online-time {margin:31px 0 0 0; border-top:1px solid #e3e3e3; padding:26px 0 0 0; text-align:left}
+.window-online-time h3 {margin:0}
+.window-online-time-list::after {content:""; display:block; clear:both}
+.window-online-time-list label {display:block; float:left; margin:16px 10px 0 0; width:100px; height:40px; cursor:pointer}
+.window-online-time-list label input {display:none}
+.window-online-time-list label span {display:block; position:relative; height:40px; background:#d9eef7; text-align:center; line-height:40px; color:#171717; font-weight:normal; font-size:16px; line-height:40px; border-radius:2px; transition:all 0.2s}
+.window-online-time-list label input:disabled+span {background:#ececec; color:#c4c4c4; cursor:default}
+.window-online-time-list label input:checked+span {background:#008cc9; color:#fff}
+
+.window-online-type {margin:30px 0 0 0; border-top:1px solid #e3e3e3; padding:26px 0 0 0; text-align:left}
+.window-online-type h3 {margin:0}
+.window-online-type .form-radio img {display:inline-block; vertical-align:middle; margin:-2px 10px 0 0}
+
+.window-faq {width:575px}
+
+@media screen and (max-width:1169px) {
+    .window-faq {width:440px}
+}
+
+.window-faq-container {padding:30px 40px 0 40px}
+.window-faq-container .faq-list {margin:30p 0 0 0; padding:0 0 71px 0}
+.window-faq-container .faq-item-title a {padding:17px 32px 17px 0; font-weight:normal; font-size:18px; line-height:27px; color:#171717}
+.window-faq-container .faq-item-title a::after {top:22px}
+.window-faq-container .faq-list-self .faq-item-title a {padding-top:10px}
+.window-faq-container .faq-list-self .faq-item-title a span {display:block; font-weight:300; font-size:14px; line-height:21px; color:#000}
+.window-faq-container .faq-list-self .faq-item-title a span strong {display:inline-block; vertical-align:middle; height:19px; background:#a0faaf; font-weight:normal; color:#1d1d1d; line-height:19px; margin:-2px 0 0 24px; padding:0 5px}
+
+.window-faq form {margin:30px 0 0 0}
+.window-faq-ctrl {margin:30px -40px 0 -40px; background:#d9eef7; text-align:center; padding:25px 0; direction:rtl}
+.window-faq-ctrl .form-submit {display:inline-block; vertical-align:middle; margin:0; direction:ltr; z-index:1}
+.window-faq-ctrl .btn-mini::before {display:none}
+
+@media screen and (max-width:1169px) {
+    .window-faq-ctrl {margin:38px -19px 0 -19px; padding:30px 0 40px 0; direction:ltr}
+    .window-faq-ctrl .form-submit {display:block; width:324px; margin:0 auto}
+    .window-faq-ctrl .form-submit .btn {padding:0; width:100%}
+}
+
+.window-faq-auth-link {display:inline-block; vertical-align:top; margin:10px 22px 0 0; font-size:14px; line-height:21px; color:#494949; font-weight:normal; text-decoration:none}
+.window-faq-auth-link:hover {color:#494949; text-decoration:none}
+.window-faq-auth-link span {border-bottom:1px dashed #bababa; transition:all 0.2s}
+.window-faq-auth-link:hover span {border-bottom-color:transparent}
+
+.faq-window-auth {padding:20px 0; text-align:center; font-weight:normal; font-size:18px; line-height:27px; color:#171717}
+.faq-window-auth::before {content:""; display:block; width:82px; height:82px; margin:0 auto 26px auto; background:#d9eef7 url(../images/faq-window-auth.svg) no-repeat center; border-radius:50%}
