@@ -356,6 +356,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.b-place-footer-close').click(function(e) {
+        $('.b-place-footer').fadeOut();
+        e.preventDefault();
+    });
+
 });
 
 function popupCenter(url, title) {
@@ -555,6 +560,24 @@ $(window).on('load resize scroll', function() {
             }
         }
     }
+
+    $('.b-place-side-container').each(function() {
+        var curBanner = $(this);
+        curBanner.height(curBanner.find('.b-place-side-wrap').height());
+        var curSide = curBanner.parent();
+        var curBlock = curSide.parent();
+        var curHeader = $('header').height() + 20;
+        if (windowScroll + curHeader > curBlock.offset().top + (curSide.offset().top - curBlock.offset().top)) {
+            var newTop = windowScroll + curHeader - curBlock.offset().top;
+            if (newTop + curBanner.height() < curBlock.height() + (curSide.offset().top - curBlock.offset().top)) {
+                curBanner.css({'top': curHeader, 'position': 'fixed', 'left': curBanner.offset().left});
+            } else {
+                curBanner.css({'top': curBlock.height() - curBanner.height(), 'position': 'relative', 'left': 'auto'});
+            }
+        } else {
+            curBanner.css({'top': 'auto', 'position': 'relative', 'left': 'auto'});
+        }
+    });
 
 });
 
