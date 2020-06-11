@@ -343,11 +343,11 @@ yx-axis
 	.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{  }
 
 	.mCSB_scrollTools .mCSB_draggerRail{
-		background-color: #fff0b1;
+		background-color: #e4e4e4;
 	}
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-		background-color: #4e4e4e;
+		background-color: #2984df;
 	}
 
 	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{

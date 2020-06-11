@@ -2,7 +2,7 @@
     <div class="window-title">Записаться на онлайн-встречу</div>
     <form action="ajax/form-success.html" method="post" class="ajax-form">
         <h3>Участник</h3>
-        
+
         <div class="remind-company">
             <div class="remind-company-inner">
                 <div class="remind-company-logo"><img src="files/catalogue-logo-01.png" alt="" /></div>
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="window-online-date">
             <h3>Дата онлайн-встречи</h3>
             <div class="window-online-date-text">Выберите, пожалуйста, дату встречи</div>
@@ -29,17 +29,97 @@
         <div class="window-online-time">
             <h3>Выбрать время начала</h3>
             <div class="window-online-date-text">Выберите, пожалуйста, время встречи.<br /> Одна встреча проходит в течении 1 часа.</div>
-            <div class="window-online-time-list">
-                <label><input type="radio" name="time" value="8:00" disabled="disabled" /><span>8:00</span></label>
-                <label><input type="radio" name="time" value="9:00" /><span>9:00</span></label>
-                <label><input type="radio" name="time" value="10:00" disabled="disabled" /><span>10:00</span></label>
-                <label><input type="radio" name="time" value="11:00" /><span>11:00</span></label>
-                <label><input type="radio" name="time" value="12:00" /><span>12:00</span></label>
-                <label><input type="radio" name="time" value="13:00" disabled="disabled" /><span>13:00</span></label>
-                <label><input type="radio" name="time" value="14:00" /><span>14:00</span></label>
-                <label><input type="radio" name="time" value="15:00" disabled="disabled" /><span>15:00</span></label>
-                <label><input type="radio" name="time" value="16:00" /><span>16:00</span></label>
-                <label><input type="radio" name="time" value="17:00" checked="checked" /><span>17:00</span></label>
+
+            <div class="window-online-time-container">
+                <div class="window-online-time-content active">
+                    <div class="window-online-time-list">
+                        <label><input type="radio" name="time1" value="8:00" disabled="disabled" /><span>8:00</span></label>
+                        <label><input type="radio" name="time1" value="9:00" /><span>9:00</span></label>
+                        <label><input type="radio" name="time1" value="10:00" disabled="disabled" /><span>10:00</span></label>
+                        <label><input type="radio" name="time1" value="11:00" /><span>11:00</span></label>
+                        <label><input type="radio" name="time1" value="12:00" /><span>12:00</span></label>
+                        <label><input type="radio" name="time1" value="13:00" disabled="disabled" /><span>13:00</span></label>
+                        <label><input type="radio" name="time1" value="14:00" /><span>14:00</span></label>
+                        <label><input type="radio" name="time1" value="15:00" disabled="disabled" /><span>15:00</span></label>
+                        <label><input type="radio" name="time1" value="16:00" /><span>16:00</span></label>
+                        <label><input type="radio" name="time1" value="17:00" checked="checked" /><span>17:00</span></label>
+                    </div>
+                </div>
+
+                <div class="window-online-time-content">
+                    <div class="window-online-time-list">
+                        <label><input type="radio" name="time2" value="8:00" disabled="disabled" /><span>8:00</span></label>
+                        <label><input type="radio" name="time2" value="9:00" /><span>9:00</span></label>
+                        <label><input type="radio" name="time2" value="10:00" disabled="disabled" /><span>10:00</span></label>
+                        <label><input type="radio" name="time2" value="11:00" /><span>11:00</span></label>
+                        <label><input type="radio" name="time2" value="12:00" /><span>12:00</span></label>
+                        <label><input type="radio" name="time2" value="13:00" disabled="disabled" /><span>13:00</span></label>
+                        <label><input type="radio" name="time2" value="14:00" /><span>14:00</span></label>
+                        <label><input type="radio" name="time2" value="15:00" disabled="disabled" /><span>15:00</span></label>
+                        <label><input type="radio" name="time2" value="16:00" /><span>16:00</span></label>
+                        <label><input type="radio" name="time2" value="17:00" checked="checked" /><span>17:00</span></label>
+                    </div>
+                </div>
+
+                <div class="window-online-time-content">
+                    <div class="window-online-time-list">
+                        <label><input type="radio" name="time3" value="8:00" disabled="disabled" /><span>8:00</span></label>
+                        <label><input type="radio" name="time3" value="9:00" /><span>9:00</span></label>
+                        <label><input type="radio" name="time3" value="10:00" disabled="disabled" /><span>10:00</span></label>
+                        <label><input type="radio" name="time3" value="11:00" /><span>11:00</span></label>
+                        <label><input type="radio" name="time3" value="12:00" /><span>12:00</span></label>
+                        <label><input type="radio" name="time3" value="13:00" disabled="disabled" /><span>13:00</span></label>
+                        <label><input type="radio" name="time3" value="14:00" /><span>14:00</span></label>
+                        <label><input type="radio" name="time3" value="15:00" disabled="disabled" /><span>15:00</span></label>
+                        <label><input type="radio" name="time3" value="16:00" /><span>16:00</span></label>
+                        <label><input type="radio" name="time3" value="17:00" checked="checked" /><span>17:00</span></label>
+                    </div>
+                </div>
+
+                <div class="window-online-time-content">
+                    <div class="window-online-time-list">
+                        <label><input type="radio" name="time4" value="8:00" disabled="disabled" /><span>8:00</span></label>
+                        <label><input type="radio" name="time4" value="9:00" /><span>9:00</span></label>
+                        <label><input type="radio" name="time4" value="10:00" disabled="disabled" /><span>10:00</span></label>
+                        <label><input type="radio" name="time4" value="11:00" /><span>11:00</span></label>
+                        <label><input type="radio" name="time4" value="12:00" /><span>12:00</span></label>
+                        <label><input type="radio" name="time4" value="13:00" disabled="disabled" /><span>13:00</span></label>
+                        <label><input type="radio" name="time4" value="14:00" /><span>14:00</span></label>
+                        <label><input type="radio" name="time4" value="15:00" disabled="disabled" /><span>15:00</span></label>
+                        <label><input type="radio" name="time4" value="16:00" /><span>16:00</span></label>
+                        <label><input type="radio" name="time4" value="17:00" checked="checked" /><span>17:00</span></label>
+                    </div>
+                </div>
+
+                <div class="window-online-time-content">
+                    <div class="window-online-time-list">
+                        <label><input type="radio" name="time5" value="8:00" disabled="disabled" /><span>8:00</span></label>
+                        <label><input type="radio" name="time5" value="9:00" /><span>9:00</span></label>
+                        <label><input type="radio" name="time5" value="10:00" disabled="disabled" /><span>10:00</span></label>
+                        <label><input type="radio" name="time5" value="11:00" /><span>11:00</span></label>
+                        <label><input type="radio" name="time5" value="12:00" /><span>12:00</span></label>
+                        <label><input type="radio" name="time5" value="13:00" disabled="disabled" /><span>13:00</span></label>
+                        <label><input type="radio" name="time5" value="14:00" /><span>14:00</span></label>
+                        <label><input type="radio" name="time5" value="15:00" disabled="disabled" /><span>15:00</span></label>
+                        <label><input type="radio" name="time5" value="16:00" /><span>16:00</span></label>
+                        <label><input type="radio" name="time5" value="17:00" checked="checked" /><span>17:00</span></label>
+                    </div>
+                </div>
+
+                <div class="window-online-time-content">
+                    <div class="window-online-time-list">
+                        <label><input type="radio" name="time6" value="8:00" disabled="disabled" /><span>8:00</span></label>
+                        <label><input type="radio" name="time6" value="9:00" /><span>9:00</span></label>
+                        <label><input type="radio" name="time6" value="10:00" disabled="disabled" /><span>10:00</span></label>
+                        <label><input type="radio" name="time6" value="11:00" /><span>11:00</span></label>
+                        <label><input type="radio" name="time6" value="12:00" /><span>12:00</span></label>
+                        <label><input type="radio" name="time6" value="13:00" disabled="disabled" /><span>13:00</span></label>
+                        <label><input type="radio" name="time6" value="14:00" /><span>14:00</span></label>
+                        <label><input type="radio" name="time6" value="15:00" disabled="disabled" /><span>15:00</span></label>
+                        <label><input type="radio" name="time6" value="16:00" /><span>16:00</span></label>
+                        <label><input type="radio" name="time6" value="17:00" checked="checked" /><span>17:00</span></label>
+                    </div>
+                </div>
             </div>
         </div>
 
