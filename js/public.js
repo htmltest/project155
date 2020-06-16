@@ -11,6 +11,35 @@ $(document).ready(function() {
         }
     });
 
+    $.validator.addClassRules({
+        inncheck: {
+            remote: 'ajax/check-inn.html'
+        }
+    });
+
+    $.validator.addClassRules({
+        emailcheck: {
+            remote: 'ajax/check-email.html'
+        }
+    });
+
+    $.validator.addMethod('notEmailEquals',
+        function(email, element) {
+            var result = true;
+            var curForm = $(element).parents().filter('form');
+            curForm.find('.notEmailEquals').each(function() {
+                var curValue = $(this).val();
+                curForm.find('.notEmailEquals').not(this).each(function() {
+                    if ($(this).val() == curValue) {
+                        result = false;
+                    }
+                });
+            });
+            return result;
+        },
+        'Данное значение уже указано'
+    );
+
     $('.main-news-list').slick({
         infinite: false,
         slidesToShow: 3,

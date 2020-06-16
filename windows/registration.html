@@ -28,14 +28,14 @@
                 <option value="4">Вариант 4</option>
             </select>
         </div>
-        <div class="form-input"><span>ИНН <em>*</em></span><input type="text" name="inn" value="" class="required" /></div>
+        <div class="form-input"><span>ИНН <em>*</em></span><input type="text" name="inn" value="" class="required inncheck" /></div>
         <div class="form-input"><span>Сайт компании или аккаунт в соц сетях <em>*</em></span><input type="text" name="url" value="" class="required" /></div>
 
         <h3>Представитель</h3>
         <div class="form-input"><span>ФИО <em>*</em></span><input type="text" name="name" value="" class="required" /></div>
         <div class="form-input"><span>Должность <em>*</em></span><input type="text" name="post" value="" class="required" /></div>
         <div class="form-input"><span>Мобильный телефон <em>*</em></span><input type="text" name="phone" value="" class="required phoneRU" /><div class="form-hint">В формате +7 495 111-22-33</div></div>
-        <div class="form-input"><span>Адрес электронной почты <em>*</em></span><input type="text" name="email" value="" class="required email" /></div>
+        <div class="form-input"><span>Адрес электронной почты <em>*</em></span><input type="text" name="email" value="" class="required email emailcheck notEmailEquals" /></div>
 
         <h3>Записаться на встречи</h3>
 
@@ -112,7 +112,7 @@
                     <div class="form-input"><span>Телефон <em>*</em></span><input type="text" name="list[_ID_][phone]" value="" class="required phoneRU" /></div>
                 </div>
                 <div class="form-row-field">
-                    <div class="form-input"><span>Эл. Почта <em>*</em></span><input type="text" name="list[_ID_][email]" value="" class="required email" /></div>
+                    <div class="form-input"><span>Эл. Почта <em>*</em></span><input type="text" name="list[_ID_][email]" value="" class="required email emailcheck notEmailEquals" /></div>
                 </div>
             </div>
         </div>
