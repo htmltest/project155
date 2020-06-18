@@ -11,35 +11,6 @@ $(document).ready(function() {
         }
     });
 
-    $.validator.addClassRules({
-        inncheck: {
-            remote: 'ajax/check-inn.html'
-        }
-    });
-
-    $.validator.addClassRules({
-        emailcheck: {
-            remote: 'ajax/check-email.html'
-        }
-    });
-
-    $.validator.addMethod('notEmailEquals',
-        function(email, element) {
-            var result = true;
-            var curForm = $(element).parents().filter('form');
-            curForm.find('.notEmailEquals').each(function() {
-                var curValue = $(this).val();
-                curForm.find('.notEmailEquals').not(this).each(function() {
-                    if ($(this).val() == curValue) {
-                        result = false;
-                    }
-                });
-            });
-            return result;
-        },
-        'Данное значение уже указано'
-    );
-
     $('.main-news-list').slick({
         infinite: false,
         slidesToShow: 3,
@@ -252,13 +223,6 @@ $(document).ready(function() {
         if ($(e.target).parents().filter('.main-partners-item').length == 0) {
             $('.main-partners-item.open').removeClass('open');
         }
-    });
-
-    $('body').on('click', '.faq-item-title a', function(e) {
-        var curItem = $(this).parent().parent();
-        curItem.toggleClass('open');
-        curItem.find('.faq-item-answer').stop(true, true).slideToggle();
-        e.preventDefault();
     });
 
     $('body').on('click', '.main-days-menu-inner a', function(e) {
