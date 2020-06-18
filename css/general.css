@@ -412,7 +412,7 @@ label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; mar
 }
 
 .wrapper {width:100%; min-width:480px; min-height:100%; position:relative; overflow:hidden}
-.wrapper-inner {padding:82px 0 448px 0}
+.wrapper-inner {padding:82px 0 508px 0}
 
 @media screen and (max-width:1169px) {
     .wrapper-inner {padding:87px 0 70px 0}
@@ -687,7 +687,7 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
     .file-link-info {font-size:16px; line-height:24px; margin:2px 0 0 0}
 }
 
-footer {height:367px; position:relative; margin:-367px 0 0 0; border-top:1px solid #f0f0f0; overflow:hidden}
+footer {height:427px; position:relative; margin:-427px 0 0 0; border-top:1px solid #f0f0f0; overflow:hidden}
 footer .container {position:relative}
 
 @media screen and (max-width:1169px) {
