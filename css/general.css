@@ -181,7 +181,7 @@ form.loading::after {content:""; display:block; position:absolute; left:0; top:0
 .form-input input.error,
 .form-input textarea.error {border-color:#df0e0e}
 .form-input input:focus,
-.form-input textarea:focus {border-color:#9acafb}
+.form-input textarea:focus {border-color:#9acafb; border-width:2px}
 label.error {display:block; font-size:13px; line-height:19px; color:#df0e0e; margin:8px 0 0 0; font-weight:normal}
 
 @media screen and (max-width:1169px) {
@@ -1049,6 +1049,11 @@ footer .container {position:relative}
 
 .faq-window-moderation {padding:20px 0; text-align:center; font-weight:normal; font-size:18px; line-height:27px; color:#171717}
 .faq-window-moderation::before {content:""; display:block; width:82px; height:82px; margin:0 auto 26px auto; background:#d9eef7 url(../images/faq-window-moderation.svg) no-repeat center; border-radius:50%}
+
+.faq-window-cancel {padding:20px 0; margin:0 -10px; text-align:center; font-weight:normal; font-size:18px; line-height:27px; color:#171717}
+.faq-window-cancel a {text-decoration:none; border-bottom:1px solid #2984df}
+.faq-window-cancel a:hover {border-bottom-color:transparent}
+.faq-window-cancel::before {content:""; display:block; width:82px; height:82px; margin:0 auto 26px auto; background:#f8dede url(../images/faq-window-cancel.svg) no-repeat center; border-radius:50%}
 
 .registration-side-title {color:#313131; max-width:377px}
 .registration-side-contacts {margin:24px 0 0 0; max-width:377px}

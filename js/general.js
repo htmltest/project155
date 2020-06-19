@@ -311,7 +311,7 @@ $(document).ready(function() {
         }
     });
 
-    $('body').on('click', '.window-close', function(e) {
+    $('body').on('click', '.window-close, .window-close-btn', function(e) {
         windowClose();
         e.preventDefault();
     });
@@ -424,6 +424,10 @@ function initForm(curForm) {
         if ($(this).val() != '') {
             $(this).parent().addClass('full');
         }
+    });
+
+    curForm.find('.form-input input:focus, .form-input textarea:focus').each(function() {
+        $(this).trigger('focus');
     });
 
     curForm.find('input.phoneRU').mask('+7 000 000-00-00');
@@ -712,6 +716,15 @@ function initForm(curForm) {
                         }
                         curForm.removeClass('loading');
                     });
+                } else if (curForm.hasClass('window-form')) {
+                    var formData = new FormData(form);
+
+                    if (curForm.find('[type=file]').length != 0) {
+                        var file = curForm.find('[type=file]')[0].files[0];
+                        formData.append('file', file);
+                    }
+
+                    windowOpen(curForm.attr('action'), formData);
                 } else {
                     if (curForm.find('.inncheck, .emailcheck').length > 0) {
                         var count = 0;

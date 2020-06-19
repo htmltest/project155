@@ -880,7 +880,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .window-online form {padding:23px 56px 0 40px}
 
 @media screen and (max-width:1169px) {
-    .window-online form {padding:30px 19px 0 19px}
+    .window-online form {padding:30px 19px 0 19px; margin:0}
     .window-auth .auth-social-title {margin:38px 0 0 0}
     .window-auth .auth-social {text-align:center}
 }
@@ -2133,4 +2133,28 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 
 @media screen and (max-width:1169px) {
     .b-place-side-link {display:none}
+}
+
+.window-online-success {padding:40px 95px 0 95px}
+.window-online-success .window-auth-ctrl {margin:0 -95px}
+
+@media screen and (max-width:1169px) {
+    .window-online-success {padding:3px 17px 0 17px}
+    .window-online-success .window-auth-ctrl {margin:43px -17px 0 -17px}
+}
+
+.meet-add-confirm {border-top:1px solid #e3e3e3; color:#171717}
+.meet-add-confirm-row {border-bottom:1px solid #e3e3e3; padding:17px 0}
+.meet-add-confirm-row::after {content:""; display:block; clear:both}
+.meet-add-confirm-label {float:left; font-size:18px; line-height:27px}
+.meet-add-confirm-value {float:right; width:163px; font-weight:500; font-size:18px; line-height:27px; position:relative}
+.meet-add-confirm-value span {font-weight:300; font-size:16px}
+.meet-add-confirm-value img {position:absolute; top:50%; right:100%; margin-top:-2px; transform:translateY(-50%); margin-right:20px; max-width:54px}
+
+@media screen and (max-width:1169px) {
+    .meet-add-confirm {border-top:none}
+    .meet-add-confirm-row {border-bottom:none; padding:17px 0 0 0}
+    .meet-add-confirm-label {float:none; font-size:20px; line-height:30px}
+    .meet-add-confirm-value {float:none; width:auto; font-weight:600; font-size:20px; line-height:30px}
+    .meet-add-confirm-value img {position:relative; top:auto; right:auto; transform:none; margin:0 13px 0 0; max-width:126px; vertical-align:middle}
 }
