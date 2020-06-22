@@ -510,7 +510,26 @@ $(document).ready(function() {
     $('body').on('change', '.window-online-date-list input', function(e) {
         var curIndex = $('.window-online-date-list input').index($('.window-online-date-list input:checked'));
         $('.window-online-time-content.active').removeClass('active');
+        $('.window-online-time-content .window-online-time-list input').removeClass('required');
         $('.window-online-time-content').eq(curIndex).addClass('active');
+        $('.window-online-time-content').eq(curIndex).find('.window-online-time-list input').addClass('required');
+    });
+
+    $('body').on('change', '.window-online-date-list input', function(e) {
+        var curIndex = $('.window-online-date-list input').index($('.window-online-date-list input:checked'));
+        $('.window-online-time-content.active').removeClass('active');
+        $('.window-online-time-content .window-online-time-list input').removeClass('required');
+        $('.window-online-time-content').eq(curIndex).addClass('active');
+        $('.window-online-time-content').eq(curIndex).find('.window-online-time-list input').addClass('required');
+        $('.window-online-date h3 .error').removeClass('visible');
+    });
+
+    $('body').on('change', '.window-online-time-list input', function(e) {
+        $('.window-online-time h3 .error').removeClass('visible');
+    });
+
+    $('body').on('change', '.window-online-type input', function(e) {
+        $('.window-online-type h3 .error').removeClass('visible');
     });
 
 });
@@ -693,7 +712,10 @@ $(window).on('load resize', function() {
 
 $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
+
+    $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
+    var windowHeight = $('#body-test-height').height();
+    $('#body-test-height').remove();
 
     if ($('.omni').length == 1) {
 
