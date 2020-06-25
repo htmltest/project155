@@ -532,6 +532,16 @@ $(document).ready(function() {
         $('.window-online-type h3 .error').removeClass('visible');
     });
 
+    if (window.location.hash !== '') {
+        var curBlock = $(window.location.hash);
+        if (curBlock.length > 0) {
+            if (curBlock.hasClass('faq-item')) {
+                curBlock.find('.faq-item-title a').trigger('click');
+            }
+            $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight()});
+        }
+    }
+
 });
 
 function popupCenter(url, title) {
