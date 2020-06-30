@@ -6,7 +6,10 @@ $(document).ready(function() {
             if ($('html').hasClass('mobile-menu-open')) {
                 $('.mobile-menu-close').trigger('click');
             }
-            $('html, body').animate({'scrollTop': curBlock.offset().top});
+            var curMargin = Number(curBlock.css('margin-top').replace(/px/, '')) + Number(curBlock.css('padding-top').replace(/px/, ''));
+            curMargin += Number(curBlock.find('> *').eq(0).css('margin-top').replace(/px/, '')) + Number(curBlock.find('> *').eq(0).css('padding-top').replace(/px/, ''));
+            curMargin += Number(curBlock.find('> .container > *').eq(0).css('margin-top').replace(/px/, '')) + Number(curBlock.find('> .container > *').eq(0).css('padding-top').replace(/px/, ''));
+            $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight() + curMargin - 20});
             e.preventDefault();
         }
     });
@@ -538,9 +541,16 @@ $(document).ready(function() {
             if (curBlock.hasClass('faq-item')) {
                 curBlock.find('.faq-item-title a').trigger('click');
             }
-            $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight()});
+            var curMargin = Number(curBlock.css('margin-top').replace(/px/, '')) + Number(curBlock.css('padding-top').replace(/px/, ''));
+            curMargin += Number(curBlock.find('> *').eq(0).css('margin-top').replace(/px/, '')) + Number(curBlock.find('> *').eq(0).css('padding-top').replace(/px/, ''));
+            $('html, body').animate({'scrollTop': curBlock.offset().top - $('header').outerHeight() + curMargin - 20});
         }
     }
+    
+    $('body').on('click', '.window-online-success-back a', function(e) {
+        windowClose();
+        e.preventDefault();
+    });
 
 });
 
@@ -605,7 +615,7 @@ $(window).on('load resize', function() {
         });
     });
 
-    $('.catalogue').each(function() {
+    $('.catalogue-list').each(function() {
         var curList = $(this);
 
         curList.find('.catalogue-item-source').css({'height': 'auto'});
