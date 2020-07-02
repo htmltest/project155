@@ -911,10 +911,10 @@ function windowOpen(linkWindow, dataWindow) {
             $('.window .window-loading').remove();
         }
 
-        $('.window-catalogue-descr-wrap').each(function() {
+        $('.archive-card-descr-container').each(function() {
             var curBlock = $(this);
             curBlock.removeClass('open');
-            if (curBlock.height() < curBlock.find('.window-catalogue-descr-inner').height()) {
+            if (curBlock.height() < curBlock.find('.archive-card-descr-content').height()) {
                 curBlock.addClass('with-more');
             } else {
                 curBlock.removeClass('with-more');
