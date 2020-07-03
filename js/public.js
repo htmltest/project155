@@ -516,15 +516,10 @@ $(document).ready(function() {
         $('.window-online-time-content .window-online-time-list input').removeClass('required');
         $('.window-online-time-content').eq(curIndex).addClass('active');
         $('.window-online-time-content').eq(curIndex).find('.window-online-time-list input').addClass('required');
-    });
-
-    $('body').on('change', '.window-online-date-list input', function(e) {
-        var curIndex = $('.window-online-date-list input').index($('.window-online-date-list input:checked'));
-        $('.window-online-time-content.active').removeClass('active');
-        $('.window-online-time-content .window-online-time-list input').removeClass('required');
-        $('.window-online-time-content').eq(curIndex).addClass('active');
-        $('.window-online-time-content').eq(curIndex).find('.window-online-time-list input').addClass('required');
         $('.window-online-date h3 .error').removeClass('visible');
+        $('.window-online-date-current span').html('<strong>' + $('.window-online-date-list input:checked').attr('data-name') + '</strong> ' + $('.window-online-date-list input:checked').attr('data-day'));
+        $('.window-online-date-list .archive-card-days-date').removeClass('current');
+        $('.window-online-date-list input:checked').parents().filter('.archive-card-days-date').addClass('current');
     });
 
     $('body').on('change', '.window-online-time-list input', function(e) {

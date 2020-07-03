@@ -612,8 +612,14 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .archive-card-days-date.weekend.other {color:#8f9bb3}
 .archive-card-days-date.active {color:#000; position:relative}
 .archive-card-days-date.active::after {content:""; display:block; position:absolute; left:50%; top:50%; width:49px; height:51px; margin:-27px 0 0 -24.5px; z-index:-1; background:url(../images/archive-card-days-date-active.svg) no-repeat; pointer-events:none}
+@media screen and (min-width:1170px) {
+    .archive-card-days-date.active:hover::after {background-image:url(../images/archive-card-days-date-hover.svg)}
+}
 .archive-card-days-date.current {color:#fff; position:relative}
 .archive-card-days-date.current::after {content:""; display:block; position:absolute; left:50%; top:50%; width:49px; height:51px; margin:-27px 0 0 -24.5px; z-index:-1; background:url(../images/archive-card-days-date-current.svg) no-repeat; pointer-events:none}
+@media screen and (min-width:1170px) {
+    .archive-card-days-date.current:hover::after {background-image:url(../images/archive-card-days-date-current.svg)}
+}
 
 @media screen and (max-width:1169px) {
     .archive-card-days {margin:20px 0 0 0; max-width:none}
@@ -2018,21 +2024,29 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .catalogue-card-my-cell img {width:32px}
 }
 
+.window-online-wide {width:752px}
 .window-online-date {margin:26px 0 0 0; text-align:left}
 .window-online-date h3 {margin:0}
 .window-online-date-text {margin:4px 0 0 0; font-size:14px; line-height:21px; color:#313131}
-.window-online-date-list {margin:10px 0 0 0}
-.window-online-date-list::after {content:""; display:block; clear:both}
-.window-online-date-list label {display:block; float:left; margin:10px 10px 0 0; width:110px; height:41px; cursor:pointer}
+.window-online-date-current {margin:19px 0 0 0; color:#313131}
+.window-online-date-current strong {font-weight:600}
+.window-online-date-list {margin:10px 0 0 0; position:relative; z-index:1}
+.window-online-date-list label {display:block; cursor:pointer}
 .window-online-date-list label input {display:none}
-.window-online-date-list label span {display:block; position:relative; height:41px; background:#c7eafc; text-align:center; line-height:41px; color:#000; font-weight:normal; font-size:18px; line-height:41px; transition:all 0.2s}
-.window-online-date-list label span:hover {background:#d9eef7}
+.window-online-date-list label span {display:block; position:relative}
 .window-online-date-list label input:checked+span,
-.window-online-date-list label input:checked+label.error+span {background:#008cc9; color:#fff}
-.window-online-date-list label span em {font-style:normal; font-weight:300; margin:0 0 0 8px; font-size:16px; color:#595959}
-.window-online-date-list label input:checked+span em,
-.window-online-date-list label input:checked+label.error+span em {color:#fff}
+.window-online-date-list label input:checked+label.error+span {}
 .window-online-date-list label.error {display:none !important}
+.window-online-date-list .archive-card-days {margin:0; max-width:none}
+.window-online-date-list .archive-card-days::after {content:""; display:block; clear:both}
+.window-online-date-list .archive-card-days-month {float:left; width:328px}
+.window-online-date-list .archive-card-days-month+.archive-card-days-month {border-top:1px solid #dadada; border-left:none}
+
+@media screen and (max-width:1169px) {
+    .window-online-wide {width:440px}
+    .window-online-date-list .archive-card-days-month {float:none; width:auto}
+    .window-online-date-list .archive-card-days-month+.archive-card-days-month {border-left:1px solid #dadada; border-top:none}
+}
 
 .window-online-time {margin:31px 0 0 0; border-top:1px solid #e3e3e3; padding:26px 0 0 0; text-align:left}
 .window-online-time-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.75s ease, transform 0.75s ease; transform:translateY(20px)}
