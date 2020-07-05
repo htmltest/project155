@@ -685,6 +685,9 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .contacts-social {border-bottom:1px solid #dfdfdf; padding:0 0 40px 0; margin:34px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
 .contacts-social a {display:inline-block; vertical-align:top; margin:0 0 0 20px}
 .contacts-social a:first-child {margin:0}
+.contacts-social a svg {display:block}
+.contacts-social a path {fill:#2984df; transition:all 0.2s}
+.contacts-social a:hover path {fill:#2e9ecf}
 
 .contacts-block {margin:60px 0 0 0}
 .contacts-block h3 {font-weight:500; margin-bottom:0}
