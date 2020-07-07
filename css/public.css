@@ -1403,7 +1403,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .window-catalogue-prev,
-.window-catalogue-next {display:block; position:fixed; z-index:9999; top:50%; width:40px; height:40px; border:1px solid #008cc9; border-radius:50%; margin:-20px 0  00; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#008cc9; transition:all 0.2s}
+.window-catalogue-next {display:block; position:fixed; z-index:9999; top:210px; width:40px; height:40px; border:1px solid #008cc9; border-radius:50%; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:#008cc9; transition:all 0.2s}
 .window-catalogue-prev {left:50%; margin-left:-517px}
 .window-catalogue-next {left:50%; margin-left:457px}
 .window-catalogue-prev::before {content:""; display:block; width:8px; height:13px; background:url(../images/news-prev.svg) no-repeat; position:absolute; left:14px; top:13px}

@@ -956,8 +956,9 @@ function windowOpen(linkWindow, dataWindow) {
             curTabsMenu.mCustomScrollbar({
                 axis: 'x'
             });
+            $('.window').addClass('with-tabs');
         });
-
+        
         var windowGalleryCount = 0;
         $('.window .archive-gallery img').one('load', function() {
             windowGalleryCount++;
@@ -971,6 +972,8 @@ function windowOpen(linkWindow, dataWindow) {
                 });
             }
         });
+        
+        $(window).trigger('resize');
 
    });
 }
