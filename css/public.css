@@ -1236,7 +1236,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .catalogue-item-source-category .catalogue-item-source-title {margin:0 0 0 8px}
 .catalogue-item-source-value {margin:2px 0 0 -8px; font-size:18px; line-height:27px; font-weight:300; letter-spacing:0; color:#000}
 .catalogue-item-source-value img {vertical-align:middle; margin:-4px 0 0 8px}
-.catalogue-item-source-value > span {vertical-align:middle; margin:-4px 0 0 8px}
+.catalogue-item-source-value > span {vertical-align:middle; margin:-4px 0 0 8px; display:inline-block}
 .catalogue-item-props {position:absolute; right:12px; bottom:12px}
 .catalogue-item-prop {position:relative; float:left; margin:0 0 0 12px; z-index:1}
 .catalogue-item-prop-icon {width:29px; height:29px; border-radius:50%; background:#cce8f4; color:#4c4a41; font-weight:500; font-size:14px; line-height:29px; letter-spacing:0.05em; text-align:center; transition:background-color 0.2s}
