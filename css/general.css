@@ -435,7 +435,7 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
 }
 
 .logo {float:left; width:210px; height:46px; background:url(../images/logo.svg) no-repeat; margin:20px 0 0 0; position:relative; background-size:100% auto; transition:all 0.5s}
-.header-fixed .logo {width:116px; height:28px; margin:18px 0 0 0}
+.header-fixed .logo {width:173px; height:38px; margin:13px 0 0 0}
 .logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
 
 @media screen and (max-width:1169px) {
