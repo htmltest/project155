@@ -289,7 +289,7 @@ $(document).ready(function() {
         });
         e.preventDefault();
     });
-    
+
     $('.catalogue-container').each(function() {
         $('.catalogue-filter-container input[type="checkbox"]').trigger('change');
     });
@@ -713,6 +713,11 @@ $(document).ready(function() {
                 $('.catalogue-search').addClass('visible');
             }
         }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.main-days-schedule-play a', function(e) {
+        $(this).parents().filter('.main-days-schedule-block').find('.main-days-schedule-time a').trigger('click');
         e.preventDefault();
     });
 
