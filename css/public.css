@@ -1262,8 +1262,9 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .catalogue-item-source-category .catalogue-item-source-title {margin:0 0 0 8px}
 .catalogue-item-source-value {margin:2px 0 0 -8px; font-size:18px; line-height:27px; font-weight:300; letter-spacing:0; color:#000}
 .catalogue-item-source-value img {vertical-align:middle; margin:-4px 0 0 8px}
-.catalogue-item-source-value > span {vertical-align:middle; margin:-4px 0 0 8px; display:inline-block}
-.catalogue-item-props {position:absolute; right:12px; top:12px}
+.catalogue-item-source-value > span {vertical-align:middle; margin:-4px 0 8px 8px; display:inline-block}
+.catalogue-item-props {position:absolute; right:12px; bottom:12px}
+.catalogue-item-props-1 {bottom:auto; top:12px}
 .catalogue-item-prop {position:relative; float:left; margin:0 0 0 12px; z-index:1}
 .catalogue-item-prop-icon {width:29px; height:29px; border-radius:50%; background:#cce8f4; color:#4c4a41; font-weight:500; font-size:14px; line-height:29px; letter-spacing:0.05em; text-align:center; transition:background-color 0.2s}
 .catalogue-item-prop:hover .catalogue-item-prop-icon {background:#ecf7fb}
@@ -1272,33 +1273,43 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .catalogue-item-prop:hover .catalogue-item-prop-text {display:block}
 .catalogue-item-prop-text::before {content:""; display:block; width:14px; height:14px; border-top:1px solid #e2e2e2; border-right:1px solid #e2e2e2; background:#fff; transform:rotate(45deg); position:absolute; right:-8px; top:50%; margin-top:-7px}
 .catalogue-item-prop-text strong {font-weight:bold}
-.catalogue-item-order {position:absolute; left:30px; bottom:20px; font-weight:normal; font-size:10px; line-height:31px; letter-spacing:0; z-index:2}
-.catalogue-item-order a {color:#fff; text-decoration:none; display:block; width:145px; height:33px; border:1px solid #e63946; background:#e63946; text-align:center}
-.catalogue-item-order a:hover {background:#fad7da; border-color:#fad7da; color:#171717}
-.catalogue-item-order a svg {display:inline-block; vertical-align:middle; margin:-2px 5px 0 0}
-.catalogue-item-order a path {fill:#fff; transition:all 0.2s}
-.catalogue-item-order a:hover path {fill:#e63946}
-.catalogue-item-faq {position:absolute; left:185px; bottom:20px; font-weight:normal; font-size:10px; line-height:31px; letter-spacing:0; z-index:2}
-.catalogue-item-faq a {color:#171717; text-decoration:none; display:block; width:101px; height:33px; border:1px solid #fad7da; background:#fad7da; text-align:center}
+.catalogue-item-links {position:absolute; left:30px; bottom:20px}
+.catalogue-item-order {float:left; font-weight:normal; font-size:10px; line-height:15px; letter-spacing:0.05em; text-transform:uppercase}
+.catalogue-item-order a {color:#3f3f3f; text-decoration:none}
+.catalogue-item-order a::after {content:""; display:inline-block; vertical-align:middle; margin:-2px 0 0 8px; width:15px; height:6px; background:url(../images/catalogue-item-order.svg) no-repeat right top; transition:all 0.2s}
+.catalogue-item-order a:hover {color:#3f3f3f; text-decoration:underline}
+.catalogue-item-order a:hover::after {width:25px}
+
+.catalogue-item-faq {float:left; margin:0 0 0 10px; font-weight:normal; font-size:12.4px; line-height:31px; letter-spacing:0; z-index:2}
+.catalogue-item-faq a {color:#171717; text-decoration:none; display:block; padding:0 10px; height:33px; border:1px solid #fad7da; background:#fad7da; text-align:center}
 .catalogue-item-faq a:hover {background:#e63946; border-color:#e63946; color:#fff}
-.catalogue-item-faq a svg {display:inline-block; vertical-align:middle; margin:-2px 5px 0 0}
+.catalogue-item-faq a svg {display:inline-block; vertical-align:middle; margin:-3px 5px 0 0}
 .catalogue-item-faq a path {stroke:#e63946; transition:all 0.2s}
 .catalogue-item-faq a:hover path {stroke:#fff}
 
-.catalogue-item-order-2 a {border-color:#fad7da; background:#fff; color:#171717}
-.catalogue-item-order-2 a:hover {background:#fff; border-color:#e63946; color:#e63946}
-.catalogue-item-order-2 a path {fill:#e63946}
-.catalogue-item-order-2 a:hover path {fill:#e63946}
+.catalogue-item-order-new {font-size:12.4px; line-height:31px; z-index:2}
+.catalogue-item-order-new a {color:#fff; display:block; padding:0 10px; height:33px; border:1px solid #e63946; background:#e63946; text-align:center; text-transform:none; letter-spacing:0}
+.catalogue-item-order-new a:hover {text-decoration:none; background:#fad7da; border-color:#fad7da; color:#171717}
+.catalogue-item-order-new a::after {display:none}
+.catalogue-item-order-new a svg {display:inline-block; vertical-align:middle; margin:-2px 5px 0 0}
+.catalogue-item-order-new a path {fill:#fff; transition:all 0.2s}
+.catalogue-item-order-new a:hover path {fill:#e63946}
+
+.catalogue-item-order-new-2 a {border-color:#fad7da; background:#fff; color:#171717}
+.catalogue-item-order-new-2 a:hover {background:#fff; border-color:#e63946; color:#e63946}
+.catalogue-item-order-new-2 a path {fill:#e63946}
+.catalogue-item-order-new-2 a:hover path {fill:#e63946}
 .catalogue-item-faq-2 a {border-color:#fad7da; background:#fff; color:#171717}
 .catalogue-item-faq-2 a:hover {background:#fff; border-color:#e63946; color:#e63946}
 .catalogue-item-faq-2 a path {stroke:#e63946}
 .catalogue-item-faq-2 a:hover path {stroke:#e63946}
 
-.catalogue-item-order-3 a {border-color:#fff; background:#fff; color:#171717}
-.catalogue-item-order-3 a:hover {background:#fff; border-color:#fff; color:#e63946}
-.catalogue-item-order-3 a path {fill:#e63946}
-.catalogue-item-order-3 a:hover path {fill:#e63946}
-.catalogue-item-faq-3 a {border-color:#fff; background:#fff; color:#171717}
+.catalogue-item-order-new-3 a {border-color:#fff; background:#fff; color:#171717; padding:0}
+.catalogue-item-order-new-3 a:hover {background:#fff; border-color:#fff; color:#e63946}
+.catalogue-item-order-new-3 a path {fill:#e63946}
+.catalogue-item-order-new-3 a:hover path {fill:#e63946}
+.catalogue-item-faq-3 {margin:0 0 0 20px}
+.catalogue-item-faq-3 a {border-color:#fff; background:#fff; color:#171717; padding:0}
 .catalogue-item-faq-3 a:hover {background:#fff; border-color:#fff; color:#e63946}
 .catalogue-item-faq-3 a path {stroke:#e63946}
 .catalogue-item-faq-3 a:hover path {stroke:#e63946}
@@ -1306,7 +1317,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 @media screen and (max-width:1169px) {
     .catalogue-list {margin:40px 20px 0 20px}
     .catalogue-item {display:block; margin:20px 0 0 0; width:auto; padding:0}
-    .catalogue-item-inner {padding:0 30px 85px 30px}
+    .catalogue-item-inner {padding:0 30px 160px 30px}
     .catalogue-item-logo {padding:29px 120px 0 0; height:88px; line-height:59px}
     .catalogue-item-logo img {max-height:59px; vertical-align:middle}
     .catalogue-item-info {margin:14px 0 0 0; height:auto}
@@ -1326,6 +1337,18 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .catalogue-item-source-value {font-size:20px; line-height:30px; font-weight:normal}
     .catalogue-item-source-category {margin:0 0 0 75px}
     .catalogue-item-source-value img {height:24px; margin:4px 2px 4px 8px}
+    .catalogue-item-links {bottom:30px}
+    .catalogue-item-order {float:none; bottom:auto}
+    .catalogue-item-order-new {font-size:16px; line-height:49px; text-align:left}
+    .catalogue-item-order-new-3 {line-height:24px}
+    .catalogue-item-order-new a {display:inline-block; height:51px; padding:0 20px; text-transform:uppercase}
+    .catalogue-item-order-new-3 a {height:auto; padding:0}
+    .catalogue-item-order-new a svg {width:37px; height:22px; margin-right:17px}
+    .catalogue-item-faq {float:none; margin:10px 0 0 0; font-size:16px; line-height:49px; text-transform:uppercase}
+    .catalogue-item-faq a {display:inline-block; padding:0 20px; height:51px; text-align:left}
+    .catalogue-item-faq a svg {width:28px; height:28px; margin-right:22px; margin-left:4px}
+    .catalogue-item-faq-3 {margin:20px 0 0 0; line-height:24px}
+    .catalogue-item-faq-3 a {height:auto; padding:0}
 }
 
 .catalogue-rows-header {display:none}
@@ -1370,22 +1393,42 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .catalogue-list-rows .catalogue-item-source-category {display:table-cell; vertical-align:middle}
     .catalogue-list-rows .catalogue-item-source-category img {display:inline-block; vertical-align:middle; margin:2px 12px 2px 0}
     .catalogue-list-rows .catalogue-item-source-category > span {display:inline-block; vertical-align:middle; margin:2px 12px 2px 0}
-    .catalogue-list-rows .catalogue-item-props {display:table-cell; vertical-align:middle; width:auto; position:relative; right:auto; top:auto; min-width:49px}
+    .catalogue-list-rows .catalogue-item-props {display:table-cell; vertical-align:middle; width:auto; position:relative; right:auto; bottom:auto; min-width:49px}
+    .catalogue-list-rows .catalogue-item-props-1 {top:auto}
     .catalogue-list-rows .catalogue-item-prop {float:right; margin:0 20px 0 0}
     .catalogue-list-rows .catalogue-item-order {display:table-cell; vertical-align:middle; border-bottom:1px solid #e8e8e8; width:29px; position:relative; left:auto; bottom:auto}
-    .catalogue-list-rows .catalogue-item-order a {display:block; font-size:0; line-height:27px; letter-spacing:-1px; width:29px; height:29px}
-    .catalogue-list-rows .catalogue-item-order a svg {margin:0; width:21px; height:13px}
+    .catalogue-list-rows .catalogue-item-order a {display:block; font-size:0; line-height:0; letter-spacing:-1px; width:29px; height:29px; background:#cce8f4 url(../images/catalogue-item-order-row.svg) no-repeat center}
+    .catalogue-list-rows .catalogue-item-order a:hover {background-color:#ecf7fb}
+    .catalogue-list-rows .catalogue-item-order a::after {display:none}
+    .catalogue-list-rows .catalogue-item:hover .catalogue-item-order {border-bottom-color:#008cc9}
+    .catalogue-list-rows .catalogue-item-order-new a {display:block; font-size:0; line-height:27px; letter-spacing:-1px; width:29px; height:29px}
+    .catalogue-list-rows .catalogue-item-order-new a svg {margin:0; width:21px; height:13px}
+    .catalogue-list-rows .catalogue-item-order-new a svg {margin:0; width:21px; height:13px}
     .catalogue-list-rows .catalogue-item-faq {display:table-cell; vertical-align:middle; border-bottom:1px solid #e8e8e8; width:39px; position:relative; left:auto; bottom:auto; padding:0 0 0 10px}
     .catalogue-list-rows .catalogue-item-faq a {display:block; font-size:0; line-height:27px; letter-spacing:-1px; width:29px; height:29px}
     .catalogue-list-rows .catalogue-item-faq a svg {margin:0; width:16px; height:16px}
 
-    .catalogue-list-rows .catalogue-item-order-3 a {border-color:rgba(230, 57, 70, 0.3); border-radius:50%}
-    .catalogue-list-rows .catalogue-item-order-3 a:hover {border-color:#e63946}
+    .catalogue-list-rows .catalogue-item-order-new a {border:1px solid #e63946; background:#e63946}
+    .catalogue-list-rows .catalogue-item-order-new a:hover {background:#fad7da; border-color:#fad7da; color:#171717}
+    .catalogue-list-rows .catalogue-item-order-new-2 a {border-color:#fad7da; background:#fff; color:#171717}
+    .catalogue-list-rows .catalogue-item-order-new-2 a:hover {background:#fff; border-color:#e63946; color:#e63946}
+    .catalogue-list-rows .catalogue-item-order-new-3 a {border-color:rgba(230, 57, 70, 0.3); background:#fff; color:#171717; border-radius:50%}
+    .catalogue-list-rows .catalogue-item-order-new-3 a:hover {background:#fff; border-color:#e63946; color:#e63946}
+
     .catalogue-list-rows .catalogue-item-faq-3 a {border-color:rgba(230, 57, 70, 0.3); border-radius:50%}
     .catalogue-list-rows .catalogue-item-faq-3 a:hover {border-color:#e63946}
     .catalogue-list-rows .catalogue-item-faq-3 a svg {width:27px; height:27px}
     .catalogue-list-rows .catalogue-item-faq-3 a path:nth-child(1) {display:none}
 }
+
+.catalogue-empty {margin:40px 0 0 0; border:1px solid #e2e2e2; text-align:center; padding:43px 0}
+.catalogue-empty::before {content:""; display:block; width:82px; height:82px; margin:0 auto; border-radius:50%; background:rgba(0, 140, 201, 0.05) url(../images/catalogue-empty.svg) no-repeat center}
+.catalogue-empty-title {margin:23px 0 0 0; font-weight:normal; font-size:24px; line-height:36px; color:#0678a9}
+.fonts-loaded .catalogue-empty-title {font-family:FiraSans, sans-serif}
+.catalogue-empty-text {margin:10px auto 0 auto; font-weight:300; font-size:16px; line-height:24px; max-width:500px; color:#237396}
+.catalogue-empty-reset {margin:10px 0 0 0; font-weight:normal; font-size:16px; line-height:24px}
+.catalogue-empty-reset a {color:#237396; text-decoration:none; border-bottom:1px dashed #bababa}
+.catalogue-empty-reset a:hover {text-decoration:none; border-bottom-color:transparent}
 
 .window-catalogue {width:854px; color:#272727}
 
@@ -1794,12 +1837,12 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .main-days-container {position:relative; margin:34px 0 0 0}
-.main-days-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.75s ease, transform 0.75s ease; transform:translateY(20px)}
-.main-days-content.active {position:relative; left:auto; top:auto; opacity:1; transform:translateY(0)}
+.main-days-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; padding:20px 0 0 0; transition:opacity 0.75s ease, padding 0.75s ease}
+.main-days-content.active {position:relative; left:auto; top:auto; opacity:1; padding:0}
 
 @media screen and (max-width:1169px) {
     .main-days-container {margin:0}
-    .main-days-content {position:relative; left:auto; top:auto; opacity:1; transform:translateY(0); margin:10px 0 0 0; width:auto}
+    .main-days-content {position:relative; left:auto; top:auto; opacity:1; margin:10px 0 0 0; padding:0; width:auto}
 }
 
 .main-days-content-title {display:none}
@@ -1809,7 +1852,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .main-days-schedule-anonce > *:first-child {margin-top:0}
 .main-days-schedule-anonce > *:last-child {margin-bottom:0}
 .main-days-schedule-anonce:last-child {margin:0 0 40px 0}
-.main-days-schedule-title {padding:26px 0 0 0; font-size:20px; font-weight:normal; line-height:30px; color:#292929}
+.main-days-schedule-title {font-size:20px; font-weight:normal; line-height:30px; color:#292929}
 .main-days-schedule-anonce+.main-days-schedule-title {padding-top:0}
 .fonts-loaded .main-days-schedule-title {font-family:FiraSans, sans-serif}
 .main-days-schedule-block {margin:12px 0 0 0; border-top:1px solid #d7d7d7; border-bottom:1px solid #d7d7d7}
@@ -1856,10 +1899,16 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .main-days-content-title-date span {font-weight:300; margin:0 0 0 12px}
     .main-days-content-inner {display:none}
     .main-days-content.open .main-days-content-inner {display:block}
+    .main-days-schedule-cell {position:relative}
+    .main-days-schedule-play {position:absolute; right:5px; top:50%; transform:translateY(-50%); height:36px}
+    .main-days-schedule-play a {display:inline-block; font-size:0; line-height:0}
+    .main-days-schedule-play a svg {display:block; margin:0; width:36px; height:36px}
+    .main-days-schedule-play a path {stroke-width:1}
 }
 
 .main-days-video {float:left; width:620px; height:480px; position:relative}
-.main-days-video-link {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center; background-size:cover; text-decoration:none}
+.main-days-video-link {display:block; position:absolute; left:0; top:0; width:620px; height:480px; background:no-repeat center; background-size:cover; text-decoration:none; transition:none}
+.main-days-video.fixed .main-days-video-link {position:fixed; left:50%; margin-left:-560px; top:86px}
 .main-days-video-link::before {content:""; position:absolute; display:block; left:0; top:0; right:0; bottom:0; background:linear-gradient(0deg, #15659f 0%, rgba(23, 139, 223, 0.2) 100%)}
 .main-days-video-title {position:absolute; left:49px; top:30px; height:31px; background:#fff; padding:0 10px; border-radius:2px; font-weight:normal; color:#000; font-size:16px; line-height:31px}
 .main-days-video.start .main-days-video-link {display:none}
@@ -1873,6 +1922,8 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 
 @media screen and (max-width:1169px) {
     .main-days-video {float:none; margin:0 -20px 0 -20px; width:auto; height:314px}
+    .main-days-video-link {width:100%; height:314px}
+    .main-days-video.fixed .main-days-video-link {position:absolute; top:0}
 }
 
 .main-days-preview {float:left; width:620px; height:480px; position:relative}
@@ -1893,12 +1944,17 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .main-days-preview-section {padding:6px 0}
 }
 
-.side-link {display:block; position:fixed; z-index:80; transition:background 0.2s; right:0; top:50%; transform:translateY(-50%); background:#ee5656; color:#fff; text-align:center; width:216px; text-decoration:none; font-size:14px; line-height:18px; font-weight:normal; padding:9px 0; border-radius:2px 0 0 2px; box-shadow:6px 6px 40px rgba(81, 81, 81, 0.2)}
-.side-link::before {content:""; display:block; margin:0 16px 11px 16px; height:1px; background:rgba(255, 255, 255, 0.2)}
-.side-link::after {content:""; display:block; margin:12px 16px 0 16px; height:1px; background:rgba(255, 255, 255, 0.2)}
-.side-link:hover {opacity:0.8}
+.side-link {display:block; position:fixed; z-index:80; transition:background 0.2s; right:0; top:50%; transform:translateY(-50%); background:#008cc9; color:#fff; text-align:center; width:216px; text-decoration:none; font-size:14px; line-height:18px; font-weight:normal; padding:9px 0; border-radius:2px 0 0 2px; box-shadow:6px 6px 40px rgba(81, 81, 81, 0.2)}
+.side-link::before {content:""; display:block; margin:0 16px 11px 16px; height:1px; background:rgba(255, 255, 255, 0.54)}
+.side-link::after {content:""; display:block; margin:12px 16px 0 16px; height:1px; background:rgba(255, 255, 255, 0.54)}
+.side-link:hover {background:#1181b1}
 .side-link span {display:block; margin:0 0 2px 0; font-weight:bold; font-size:18px; line-height:27px}
 .fonts-loaded .side-link span {font-family:FiraSans, sans-serif}
+
+.side-link-1 {background:#e63946}
+.side-link-1::before {background:rgba(255, 255, 255, 0.2)}
+.side-link-1::after {background:rgba(255, 255, 255, 0.2)}
+.side-link-1:hover {background:#e63946; opacity:0.8}
 
 @media screen and (max-width:1169px) {
     .side-link {display:none}
@@ -2251,7 +2307,7 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .schedule-headers-item:nth-child(2) {width:323px}
 .schedule-headers-item:nth-child(3) {width:202px}
 .schedule-headers-item:nth-child(4) {padding-right:70px}
-.schedule-headers-item:nth-child(5) {width:53px}
+.schedule-headers-item:nth-child(5) {width:73px}
 
 @media screen and (max-width:1169px) {
     .schedule-list {display:block; margin:40px 0 50px 92px; border-bottom:1px solid #d8d8d8}
@@ -2289,7 +2345,11 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 .schedule-item-source-title {display:none}
 .schedule-item-source-value > span {margin:0 8px 0 0}
 .main-days-content-inner .video-detail-link::before {content:""; position:absolute; display:block; left:0; top:0; right:0; bottom:0; background:linear-gradient(0deg, #15659f 0%, rgba(23, 139, 223, 0.2) 100%)}
-
+.schedule-item-record {display:table-cell; vertical-align:middle; padding:11px 0; border-top:1px solid #e8e8e8}
+.schedule-item-record-play a {color:#171717; font-size:12px; line-height:18px; font-weight:normal; text-decoration:none}
+.schedule-item-record-play a:hover {color:#e63946}
+.schedule-item-record-play a svg {display:inline-block; vertical-align:middle; margin:-2px 6px 0 0}
+.schedule-item-record-play a path {stroke:#e63946}
 
 @media screen and (max-width:1169px) {
     .schedule-item {display:block; border-top:1px solid #d8d8d8; position:relative; padding:0 0 21px 0}
@@ -2318,6 +2378,10 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
     .schedule-remind {margin:40px 0 0 0}
     .schedule-remind .btn {height:53px; line-height:53px; font-size:17px}
     .schedule-remind .btn::before {display:none}
+    .schedule-item-record {display:block; position:absolute; right:0; top:27px; padding:0; border:none}
+    .schedule-item-record-play a {font-size:0; line-height:0}
+    .schedule-item-record-play a svg {display:block; width:30px; height:30px}
+    .schedule-item-record-play a path {stroke-width:1}
 }
 
 .b-place-big {margin:80px 0; line-height:0}
