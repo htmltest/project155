@@ -632,11 +632,21 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .archive-card-info-btn {margin:40px 0}
+.archive-card-info-importants+.archive-card-info-btn {margin-top:20px}
 .archive-card-info-btn .btn {padding:0 14px 0 20px}
 .archive-card-info-btn .btn svg {display:inline-block; vertical-align:middle; margin:-2px 15px 0 0; width:21px}
 
+.archive-card-info-btn-interest .btn {color:#fff; min-width:219px; padding:0 10px; border:1px solid #e63946; background:#e63946; text-align:center; letter-spacing:0.05em; font-size:12px}
+.archive-card-info-btn-interest .btn:hover {text-decoration:none; background:#fad7da; border-color:#fad7da; color:#171717}
+.archive-card-info-btn-interest .btn::before {border-color:#fad7da; opacity:1}
+.archive-card-info-btn-interest .btn::after {display:none}
+.archive-card-info-btn-interest .btn svg {display:inline-block; vertical-align:middle; margin:-2px 5px 0 0}
+.archive-card-info-btn-interest .btn path {fill:#fff; transition:all 0.2s}
+.archive-card-info-btn-interest .btn:hover path {fill:#e63946}
+
 @media screen and (max-width:1169px) {
-    .archive-card-info-btn .btn svg {width:34px}
+    .archive-card-info-btn-interest .btn {font-size:20px}
+    .archive-card-info-btn .btn svg {width:34px; height:auto}
 }
 
 .catalogue-card-video {margin:66px 0 0 0; max-width:932px}
@@ -1254,6 +1264,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .catalogue-item-order-new-2 a {border-color:#fad7da; background:#fff; color:#171717}
 .catalogue-item-order-new-2 a:hover {background:#fff; border-color:#e63946; color:#e63946}
 .catalogue-item-order-new-2 a svg {width:20px; height:auto}
+.catalogue-item-order-new-2-interest a svg {width:12px; height:12px}
 .catalogue-item-order-new-2 a path {fill:#e63946}
 .catalogue-item-order-new-2 a:hover path {fill:#e63946}
 .catalogue-item-faq-2 a {border-color:#fad7da; background:#fff; color:#171717}
@@ -1266,6 +1277,7 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 .catalogue-item-order-new-3 a path {fill:#e63946}
 .catalogue-item-order-new-3 a:hover path {fill:#e63946}
 .catalogue-item-order-new-3 a svg {width:20px; height:auto}
+.catalogue-item-order-new-3-interest a svg {width:12px; height:12px}
 .catalogue-item-faq-3 {margin:0 0 0 20px}
 .catalogue-item-faq-3 a {border-color:#fff; background:#fff; color:#171717; padding:0}
 .catalogue-item-faq-3 a:hover {background:#fff; border-color:#fff; color:#e63946}
@@ -1302,6 +1314,9 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .catalogue-item-order-new a {display:inline-block; height:51px; padding:0 20px; text-transform:uppercase}
     .catalogue-item-order-new-3 a {height:auto; padding:0}
     .catalogue-item-order-new a svg {width:37px; height:22px; margin-right:17px}
+    .catalogue-item-order-new-interest a svg {width:22px; height:22px}
+    .catalogue-item-order-new-2-interest a svg {width:22px; height:22px}
+    .catalogue-item-order-new-3-interest a svg {width:22px; height:22px}
     .catalogue-item-faq {float:none; margin:10px 0 0 0; font-size:16px; line-height:49px; text-transform:uppercase}
     .catalogue-item-faq a {display:inline-block; padding:0 20px; height:51px; text-align:left}
     .catalogue-item-faq a svg {width:28px; height:28px; margin-right:22px; margin-left:4px}
@@ -1363,6 +1378,9 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
     .catalogue-list-rows .catalogue-item-order-new a {display:block; font-size:0; line-height:27px; letter-spacing:-1px; width:29px; height:29px; padding:0}
     .catalogue-list-rows .catalogue-item-order-new a svg {margin:0; width:21px; height:13px}
     .catalogue-list-rows .catalogue-item-order-new a svg {margin:0; width:21px; height:13px}
+    .catalogue-list-rows .catalogue-item-order-new-interest a svg {width:16px; height:16px}
+    .catalogue-list-rows .catalogue-item-order-new-2-interest a svg {width:16px; height:16px}
+    .catalogue-list-rows .catalogue-item-order-new-3-interest a svg {width:16px; height:16px}
     .catalogue-list-rows .catalogue-item-faq {display:inline-block; vertical-align:top; width:29px; margin:0 0 0 10px}
     .catalogue-list-rows .catalogue-item-faq a {display:block; font-size:0; line-height:27px; letter-spacing:-1px; width:29px; height:29px; padding:0}
     .catalogue-list-rows .catalogue-item-faq a svg {margin:0; width:16px; height:16px}
