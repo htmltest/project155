@@ -2536,3 +2536,22 @@ a.catalogue-card-faq-link:hover {border-bottom-color:transparent}
 @media screen and (max-width:1169px) {
     .main-finish-notice {margin:70px 0 0 0; font-weight:500; font-size:20px; line-height:30px; max-width:none}
 }
+
+.catalogue-info {margin:17px 0 30px 0; border:1px solid #e2e2e2; position:relative; background:#fff url(../images/catalogue-info.svg) no-repeat 20px 21px}
+.catalogue-info-mobile {display:none}
+.catalogue-info::before {content:""; display:block; position:absolute; left:10px; top:10px; right:-11px; bottom:-11px; background:#ecf6fb; z-index:-1}
+.catalogue-info::after {content:""; display:block; clear:both}
+.catalogue-info-text {float:left; max-width:calc(100% - 194px); padding:22px 0 25px 54px}
+.catalogue-info-text strong {font-weight:600}
+.catalogue-info-btn {float:left; padding:15px 0 15px 40px}
+.catalogue-info-btn a {display:block; width:134px; height:41px; text-align:center; background:#e63946; color:#fff; text-transform:uppercase; font-weight:normal; font-size:12px; line-height:41px; letter-spacing:0.05em; text-decoration:none}
+.catalogue-info-btn a:hover {text-decoration:none; background:#fad7da; color:#171717}
+
+@media screen and (max-width:1169px) {
+    .catalogue-info {margin:0 20px 40px 20px; background-image:none; display:none}
+    .catalogue-info-mobile {display:block}
+    .catalogue-info-text {float:none; padding:20px 20px 0 20px; max-width:none; text-align:center}
+    .catalogue-info-text strong {display:block}
+    .catalogue-info-btn {float:none; padding:20px 20px 20px 0; text-align:center}
+    .catalogue-info-btn a {display:inline-block; vertical-align:top; width:150px; height:51px; font-size:16px; line-height:51px}
+}
