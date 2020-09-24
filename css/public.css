@@ -1939,6 +1939,8 @@ a.main-welcome-link-other:hover span {border-bottom-color:transparent}
 }
 
 .main-pf {margin:96px 0 0 0; border-top:3px solid #fce480; border-bottom:3px solid #fce480; padding:50px 0 70px 0}
+.main-pf-start {margin:0; border-top:none}
+.main-pf-start+.main-slider {top:517px}
 .main-pf h2 {margin:0; position:relative; font-weight:800}
 .main-pf-logo {width:163px; height:40px; margin:33px 0 0 0; background:url(../images/logo-pf.svg) no-repeat}
 .main-pf-container {position:relative; margin:28px 0 0 0}

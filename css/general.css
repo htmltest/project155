@@ -443,7 +443,7 @@ header {position:fixed; left:0; top:0; right:0; z-index:99; height:82px; backgro
     .header-fixed .logo {width:177px; height:44px; margin:20px 0 0 0}
 }
 
-.header-menu {float:left; margin:27px 0 0 110px; font-size:14px; line-height:28px; transition:all 0.5s}
+.header-menu {float:left; margin:27px 0 0 50px; font-size:14px; line-height:28px; transition:all 0.5s}
 .header-fixed .header-menu {margin:16px 0 0 161px}
 .header-menu > ul {margin:0; padding:0; list-style:none; position:relative}
 .header-menu > ul > li {float:left; margin:0 0 0 20px; padding:0; position:relative}
